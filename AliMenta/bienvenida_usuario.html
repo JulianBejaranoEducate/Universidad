@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliMenta - Bienvenido Usuario</title>
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header class="cabecera">
+        <nav class="navegacion-principal">
+            <div class="logo-container">
+                <img src="logo-alimenta.png" alt="Logo AliMenta" class="logo">
+                <span class="nombre-plataforma">AliMenta</span>
+            </div>
+
+            <div class="menu-principal">
+                <a href="Principal.html" class="menu-item activo">Inicio</a>
+                <a href="#" class="menu-item">Dashboards</a>
+                <a href="#" class="menu-item">Fundaciones</a>
+                <a href="#" class="menu-item">Mi impacto</a>
+                <a href="#" class="menu-item">Perfil</a>
+            </div>
+
+            <div class="controles-usuario">
+                <button class="notificaciones" aria-label="Notificaciones">
+                    <span class="icono-notificacion">🔔</span>
+                </button>
+                <button class="configuracion" aria-label="Configuración">
+                    <span class="icono-configuracion">⚙️</span>
+                </button>
+                <button class="logout" aria-label="Cerrar sesión">
+                    <span class="icono-logout">📤</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-usuario">
+        <section class="saludo-usuario">
+            <h1 class="titulo-bienvenida">¡Bienvenido de vuelta, Usuario Donador! 👋</h1>
+            <p class="impacto-resumen">Tu generosidad ha impactado <strong>1,247</strong> vidas este año.</p>
+        </section>
+
+        <!-- Estadísticas principales -->
+        <section class="estadisticas-principales">
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Total Donado</h3>
+                    <p class="valor-estadistica">$3,450</p>
+                </div>
+                <div class="tendencia positiva">
+                    <span class="icono-tendencia">📈</span>
+                </div>
+            </article>
+
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Personas Impactadas</h3>
+                    <p class="valor-estadistica">1,247</p>
+                </div>
+                <div class="icono-personas">
+                    <span>👥</span>
+                </div>
+            </article>
+
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Donaciones</h3>
+                    <p class="valor-estadistica">28</p>
+                </div>
+                <div class="icono-donaciones">
+                    <span>❤️</span>
+                </div>
+            </article>
+
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Países Ayudados</h3>
+                    <p class="valor-estadistica">12</p>
+                </div>
+                <div class="icono-paises">
+                    <span>🌎</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Acciones rápidas -->
+        <section class="acciones-rapidas tarjeta">
+            <header class="encabezado-seccion">
+                <h2 class="titulo-seccion">
+                    <span class="icono-acciones">⚡</span>
+                    Acciones Rápidas
+                </h2>
+            </header>
+
+            <div class="botones-acciones">
+                <a href="#donar" class="boton-accion donar">
+                    <span class="icono-donar">❤️</span>
+                    Hacer Donación
+                </a>
+                <a href="#impacto" class="boton-accion impacto">
+                    <span class="icono-ver">👁️</span>
+                    Ver Mi Impacto
+                </a>
+            </div>
+        </section>
+
+        <div class="contenedor-dos-columnas">
+            <!-- Columna izquierda: Actividad reciente -->
+            <section class="actividad-reciente tarjeta">
+                <header class="encabezado-seccion">
+                    <h2 class="titulo-seccion">Actividad reciente</h2>
+                </header>
+                <p class="subtitulo-seccion">Tus últimas donaciones e impacto generado</p>
+
+                <ul class="lista-actividades">
+                    <li class="actividad">
+                        <div class="indicador-tipo verde"></div>
+                        <div class="detalles-actividad">
+                            <h3 class="titulo-actividad">Donación procesada</h3>
+                            <p class="descripcion-actividad">$150 a Programa Mundial de Alimentos</p>
+                        </div>
+                        <div class="tiempo-actividad">
+                            <span>Hace 2 días</span>
+                        </div>
+                    </li>
+
+                    <li class="actividad">
+                        <div class="indicador-tipo azul"></div>
+                        <div class="detalles-actividad">
+                            <h3 class="titulo-actividad">Reporte de impacto recibido</h3>
+                            <p class="descripcion-actividad">45 niños alimentados con tu donación</p>
+                        </div>
+                        <div class="tiempo-actividad">
+                            <span>Hace 1 semana</span>
+                        </div>
+                    </li>
+
+                    <li class="actividad">
+                        <div class="indicador-tipo morado"></div>
+                        <div class="detalles-actividad">
+                            <h3 class="titulo-actividad">Nuevo logro desbloqueado</h3>
+                            <p class="descripcion-actividad">Donador comprometido - 25 donaciones</p>
+                        </div>
+                        <div class="tiempo-actividad">
+                            <span>Hace 2 semanas</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Columna derecha: Fundaciones favoritas y metas -->
+            <div class="contenedor-lateral">
+                <section class="fundaciones-favoritas tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Mis fundaciones favoritas</h2>
+                    </header>
+                    
+                    <ul class="lista-fundaciones">
+                        <li class="fundacion">
+                            <div class="logo-fundacion">
+                                <img src="logo-pma.png" alt="Logo PMA" class="logo-circular">
+                            </div>
+                            <div class="info-fundacion">
+                                <h3 class="nombre-fundacion">Programa mundial de alimentos</h3>
+                                <p class="estado-fundacion">Bien financiada</p>
+                            </div>
+                        </li>
+                        
+                        <li class="fundacion">
+                            <div class="logo-fundacion">
+                                <img src="logo-unicef.png" alt="Logo UNICEF" class="logo-circular">
+                            </div>
+                            <div class="info-fundacion">
+                                <h3 class="nombre-fundacion">UNICEF</h3>
+                                <p class="estado-fundacion">Bien financiada</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <footer class="pie-seccion">
+                        <a href="#todas-fundaciones" class="ver-todas">Ver todas</a>
+                    </footer>
+                </section>
+                
+                <section class="meta-mensual tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Meta de enero</h2>
+                    </header>
+                    
+                    <div class="detalles-meta">
+                        <div class="progreso-meta">
+                            <p class="etiqueta-progreso">Progreso</p>
+                            <p class="valor-progreso"><span class="actual">$150</span> / <span class="objetivo">$200</span></p>
+                        </div>
+                        
+                        <div class="barra-progreso">
+                            <div class="progreso"></div>
+                        </div>
+                        
+                        <p class="descripcion-meta">¡Estás muy cerca de tu meta mensual! Solo faltan $50</p>
+                        
+                        <button class="boton-completar-meta">Completar meta</button>
+                    </div>
+                </section>
+                
+                <section class="impacto-mensual tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Impacto de enero</h2>
+                    </header>
+                    
+                    <div class="metricas-impacto">
+                        <div class="metrica">
+                            <p class="valor-metrica">99</p>
+                            <p class="etiqueta-metrica">Personas alimentadas</p>
+                        </div>
+                        
+                        <div class="metrica">
+                            <p class="valor-metrica">12</p>
+                            <p class="etiqueta-metrica">Familias asistidas</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

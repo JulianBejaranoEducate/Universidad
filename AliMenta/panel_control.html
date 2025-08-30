@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliMenta - Panel de Control Fundación</title>
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header class="cabecera">
+        <nav class="navegacion-principal">
+            <div class="logo-container">
+                <img src="logo-alimenta.png" alt="Logo AliMenta" class="logo">
+                <span class="nombre-plataforma">AliMenta</span>
+            </div>
+
+            <div class="menu-principal">
+                <a href="#" class="menu-item activo">Inicio</a>
+                <a href="#" class="menu-item">Dashboards</a>
+                <a href="#" class="menu-item">Fundaciones</a>
+                <a href="#" class="menu-item">Mi impacto</a>
+                <a href="#" class="menu-item">Perfil</a>
+            </div>
+
+            <div class="controles-usuario">
+                <button class="notificaciones" aria-label="Notificaciones">
+                    <span class="icono-notificacion">🔔</span>
+                </button>
+                <button class="configuracion" aria-label="Configuración">
+                    <span class="icono-configuracion">⚙️</span>
+                </button>
+                <button class="logout" aria-label="Cerrar sesión">
+                    <span class="icono-logout">📤</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="dashboard-fundacion">
+        <!-- Encabezado con nombre de la fundación -->
+        <section class="encabezado-fundacion">
+            <div class="info-fundacion">
+                <h1 class="titulo-panel">Panel de Control - Nombre Fundación</h1>
+                <p class="impacto-resumen">Tu generosidad ha impactado <strong>1,247</strong> vidas este año.</p>
+            </div>
+            <div class="icono-fundacion">
+                <span class="logo-pais">🌎</span>
+            </div>
+        </section>
+
+        <!-- Estadísticas principales -->
+        <section class="estadisticas-principales">
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Donaciones Recibidas</h3>
+                    <p class="valor-estadistica">$2.4M</p>
+                </div>
+                <div class="icono-estadistica">
+                    <span class="icono-donaciones">💰</span>
+                </div>
+            </article>
+
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Personas Asistidas</h3>
+                    <p class="valor-estadistica">1,247</p>
+                </div>
+                <div class="icono-estadistica">
+                    <span class="icono-personas">👥</span>
+                </div>
+            </article>
+
+            <article class="tarjeta estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Proyectos Activos</h3>
+                    <p class="valor-estadistica">28</p>
+                </div>
+                <div class="icono-estadistica">
+                    <span class="icono-proyectos">📋</span>
+                </div>
+            </article>
+        </section>
+
+        <div class="contenedor-dos-columnas">
+            <div class="columna-izquierda">
+                <!-- Acciones rápidas -->
+                <section class="acciones-rapidas tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">
+                            <span class="icono-acciones">⚡</span>
+                            Acciones Rápidas
+                        </h2>
+                    </header>
+
+                    <div class="botones-acciones">
+                        <a href="#nuevo-proyecto" class="boton-accion nuevo-proyecto">
+                            Nuevo Proyecto
+                        </a>
+                        <a href="#crear-reporte" class="boton-accion crear-reporte">
+                            Crear Reporte
+                        </a>
+                        <a href="#gestionar-equipo" class="boton-accion gestionar-equipo">
+                            Gestionar Equipo
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Proyectos que requieren atención -->
+                <section class="proyectos-atencion tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Proyectos que requieren atención</h2>
+                    </header>
+                    <p class="descripcion-seccion">Proyectos con alertas o próximos a vencer</p>
+
+                    <ul class="lista-proyectos-atencion">
+                        <li class="proyecto alerta-critica">
+                            <div class="icono-alerta">⚠️</div>
+                            <div class="detalles-proyecto">
+                                <h3 class="nombre-proyecto">Emergencia Alimentaria - Siria</h3>
+                                <p class="alerta-descripcion">Fondos insuficientes - $50k necesarios</p>
+                            </div>
+                        </li>
+
+                        <li class="proyecto alerta-moderada">
+                            <div class="icono-alerta">⚠️</div>
+                            <div class="detalles-proyecto">
+                                <h3 class="nombre-proyecto">Programa Escolar - Honduras</h3>
+                                <p class="alerta-descripcion">Reporte mensual pendiente</p>
+                            </div>
+                        </li>
+
+                        <li class="proyecto alerta-baja">
+                            <div class="icono-alerta">⚠️</div>
+                            <div class="detalles-proyecto">
+                                <h3 class="nombre-proyecto">Nutrición Infantil - Uniempresarial</h3>
+                                <p class="alerta-descripcion">Renovación de permisos en 15 días</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Actividad reciente -->
+                <section class="actividad-reciente tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Actividad reciente</h2>
+                    </header>
+                    <p class="descripcion-seccion">Últimas donaciones y actualizaciones de proyectos</p>
+
+                    <ul class="lista-actividades">
+                        <li class="actividad">
+                            <div class="indicador-tipo verde"></div>
+                            <div class="detalles-actividad">
+                                <h3 class="titulo-actividad">Nueva donación recibida</h3>
+                                <p class="descripcion-actividad">$25,000 de Donador 2</p>
+                            </div>
+                            <div class="tiempo-actividad">
+                                <span>Hace 2 días</span>
+                            </div>
+                        </li>
+
+                        <li class="actividad">
+                            <div class="indicador-tipo azul"></div>
+                            <div class="detalles-actividad">
+                                <h3 class="titulo-actividad">Proyecto actualizado</h3>
+                                <p class="descripcion-actividad">Emergencia Alimentaria - Yemen: 85% completado</p>
+                            </div>
+                            <div class="tiempo-actividad">
+                                <span>Hace 1 semana</span>
+                            </div>
+                        </li>
+
+                        <li class="actividad">
+                            <div class="indicador-tipo morado"></div>
+                            <div class="detalles-actividad">
+                                <h3 class="titulo-actividad">Reporte publicado</h3>
+                                <p class="descripcion-actividad">Impacto Q2 2024 - 2.3M personas asistidas</p>
+                            </div>
+                            <div class="tiempo-actividad">
+                                <span>Hace 2 semanas</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="columna-derecha">
+                <!-- Donaciones recientes -->
+                <section class="donaciones-recientes tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Donaciones Recientes</h2>
+                    </header>
+
+                    <ul class="lista-donaciones">
+                        <li class="donacion">
+                            <div class="info-donador">
+                                <h3 class="nombre-donador">Donador 1</h3>
+                                <p class="fecha-donacion">Donación mensual</p>
+                            </div>
+                            <div class="monto-donacion positivo">
+                                $150
+                            </div>
+                        </li>
+                        
+                        <li class="donacion">
+                            <div class="info-donador">
+                                <h3 class="nombre-donador">Donador 2</h3>
+                                <p class="fecha-donacion">Donación mensual</p>
+                            </div>
+                            <div class="monto-donacion positivo">
+                                $150
+                            </div>
+                        </li>
+                        
+                        <li class="donacion">
+                            <div class="info-donador">
+                                <h3 class="nombre-donador">Donador 3</h3>
+                                <p class="fecha-donacion">Donación mensual</p>
+                            </div>
+                            <div class="monto-donacion positivo">
+                                $150
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <footer class="pie-seccion">
+                        <a href="#todas-donaciones" class="ver-todas">Ver todas las donaciones</a>
+                    </footer>
+                </section>
+                
+                <!-- Meta mensual -->
+                <section class="meta-mensual tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Meta de enero</h2>
+                    </header>
+                    
+                    <div class="detalles-meta">
+                        <div class="progreso-meta">
+                            <p class="etiqueta-progreso">Progreso</p>
+                            <p class="valor-progreso"><span class="actual">$150</span> / <span class="objetivo">$200</span></p>
+                        </div>
+                        
+                        <div class="barra-progreso">
+                            <div class="progreso" style="width: 75%;"></div>
+                        </div>
+                        
+                        <p class="descripcion-meta">Estás a $50 de poder activar nuevos canales de distribución</p>
+                    </div>
+                </section>
+                
+                <!-- Próximos eventos -->
+                <section class="proximos-eventos tarjeta">
+                    <header class="encabezado-seccion">
+                        <h2 class="titulo-seccion">Próximos Eventos</h2>
+                    </header>
+                    
+                    <ul class="lista-eventos">
+                        <li class="evento">
+                            <h3 class="titulo-evento">Reunión de Donantes</h3>
+                            <p class="fecha-evento">10 Enero, Virtual</p>
+                        </li>
+                        
+                        <li class="evento">
+                            <h3 class="titulo-evento">Reporte Trimestral</h3>
+                            <p class="fecha-evento">15 Enero, Virtual</p>
+                        </li>
+                        
+                        <li class="evento">
+                            <h3 class="titulo-evento">Visita de Campo</h3>
+                            <p class="fecha-evento">3 febrero, presencial</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

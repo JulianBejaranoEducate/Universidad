@@ -1,0 +1,13 @@
+footer{
+    margin-top: 40px; /* separa el footer de la lista de tareas */
+    clear: both;
+    background-color: black;
+}
+
+p{
+    padding: 2%;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    margin: 0; /* evita márgenes dobles */
+}

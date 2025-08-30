@@ -1,0 +1,56 @@
+<!-- Estructura de un proyecto nativo 
+    
+    1. Estilos -> archivo .css
+    2. Scripts -> JavaScript -> dist
+    3. En la raiz del proyecto -> index.html
+    4. Archivo para las paginas -> subcarpetsa de las paginas
+    5. assets -> imagenes, fuentes, etc.
+    6. other -> Para cualquier otro archivo que no sean de los anteriores
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccion de elementos en el DOM</title>
+</head>
+<body>
+    <header>
+        <h1>Seleccion de elementos en el DOM</h1>
+            <!-- Etiqueta de accesibilidad "aria-label" -->
+            <div class=""><img src="./assets/img/cat-g40cfe9c76_640.jpg" aria-label="Logo de la marca Coca-Cola">Logo</div>
+            <div>
+                <nav class="menu" id="menu">
+                    <ul class="menu-list">
+                        <li><a href="">Principal</a></li>
+                        <li><a href="">Gatos</a></li>
+                        <li><a href="">Perros</a></li>
+                        <li><a href="">Pajaritos</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <!-- section.seccion>article*3>h2+p -->
+        <section class="seccion">
+            <article class="art-cats">
+                <h2>Gatos</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, obcaecati doloremque temporibus minima tempore nemo numquam ducimus eveniet saepe magni quis expedita voluptatibus, aut a impedit soluta similique aspernatur maiores?</p>
+            </article>
+            <article class="art-dogs">
+                <h2>Perros</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, obcaecati doloremque temporibus minima tempore nemo numquam ducimus eveniet saepe magni quis expedita voluptatibus, aut a impedit soluta similique aspernatur maiores?</p>
+            </article>
+            <article class="art-birds">
+                <h2>Pajaritos</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, obcaecati doloremque temporibus minima tempore nemo numquam ducimus eveniet saepe magni quis expedita voluptatibus, aut a impedit soluta similique aspernatur maiores?</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>Derechos Reservados</div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

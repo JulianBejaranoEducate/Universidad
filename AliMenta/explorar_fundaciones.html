@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliMenta - Explorar Fundaciones</title>
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header class="encabezado-pagina">
+        <div class="contenedor-titulo">
+            <h1 class="titulo-pagina">Explorar Fundaciones</h1>
+            <p class="descripcion-pagina">Encuentra causas que necesitan tu ayuda urgente</p>
+        </div>
+        <div class="enlaces-usuario">
+            <a href="bienvenida_usuario.html" class="enlace-dashboard">
+                <img src="icono-dashboard.png" alt="Dashboard" class="icono-enlace">
+                Mi Dashboard
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de búsqueda y filtros -->
+    <section class="seccion-busqueda">
+        <div class="contenedor-busqueda">
+            <div class="campo-busqueda">
+                <img src="icono-buscar.png" alt="Buscar" class="icono-busqueda">
+                <input type="text" placeholder="Buscar fundaciones" aria-label="Buscar fundaciones">
+            </div>
+            
+            <div class="filtro-dropdown">
+                <button class="boton-filtro">
+                    <img src="icono-categorias.png" alt="Categorías" class="icono-filtro">
+                    Categorías
+                </button>
+                <!-- Aquí iría el menú desplegable de categorías -->
+            </div>
+            
+            <div class="filtro-dropdown">
+                <button class="boton-filtro">
+                    <img src="icono-prioridades.png" alt="Prioridades" class="icono-filtro">
+                    Prioridades
+                </button>
+                <!-- Aquí iría el menú desplegable de prioridades -->
+            </div>
+            
+            <button class="boton-buscar">
+                <img src="icono-lupa.png" alt="Lupa" class="icono-lupa">
+                Buscar
+            </button>
+        </div>
+    </section>
+
+    <!-- Tarjetas de fundaciones -->
+    <main class="contenedor-fundaciones">
+        <!-- Tarjeta de fundación -->
+        <article class="tarjeta-fundacion">
+            <header class="encabezado-fundacion">
+                <div class="info-principal">
+                    <img src="logo-alimenta-esperanza.png" alt="Logo Alimenta Esperanza" class="logo-fundacion">
+                    <div class="detalles-fundacion">
+                        <h2 class="nombre-fundacion">Alimenta Esperanza</h2>
+                        <span class="etiqueta-verificada">Verificada</span>
+                    </div>
+                </div>
+                <div class="total-recaudado">
+                    <p class="etiqueta-total">Total recaudado</p>
+                    <p class="monto-recaudado">$2.400.000</p>
+                </div>
+            </header>
+            
+            <div class="ubicacion-fundacion">
+                <img src="icono-ubicacion.png" alt="Ubicación" class="icono-ubicacion">
+                <span class="paises">Colombia, Venezuela</span>
+                <span class="separador">•</span>
+                <div class="calificacion">
+                    <img src="icono-estrella.png" alt="Calificación" class="icono-estrella">
+                    <span>4.9</span>
+                </div>
+                <span class="separador">•</span>
+                <span class="proyectos-activos">8 proyectos activos</span>
+            </div>
+            
+            <div class="estadisticas-impacto">
+                <div class="estadistica">
+                    <p class="valor-estadistica">45.000</p>
+                    <p class="descripcion-estadistica">Niños alimentados</p>
+                </div>
+                <div class="estadistica">
+                    <p class="valor-estadistica">12.000</p>
+                    <p class="descripcion-estadistica">Familias ayudadas</p>
+                </div>
+                <div class="estadistica">
+                    <p class="valor-estadistica">150</p>
+                    <p class="descripcion-estadistica">Escuelas ayudadas</p>
+                </div>
+            </div>
+            
+            <div class="seccion-necesidades">
+                <p class="titulo-necesidades">
+                    <img src="icono-alerta.png" alt="Alerta" class="icono-alerta">
+                    Necesidades urgentes
+                </p>
+                
+                <!-- Proyecto urgente 1 -->
+                <div class="proyecto-urgente">
+                    <header class="encabezado-proyecto">
+                        <h3 class="nombre-proyecto">Crisis alimentaria en Venezuela</h3>
+                        <div class="etiquetas-proyecto">
+                            <span class="etiqueta critico">Crítico</span>
+                            <span class="etiqueta emergencia">Emergencia</span>
+                        </div>
+                    </header>
+                    <p class="descripcion-proyecto">15.000 niños necesitan alimentación urgente</p>
+                    
+                    <div class="progreso-proyecto">
+                        <p class="texto-progreso">Progreso: $32.000 de $50.000</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="64"></div>
+                        </div>
+                        <p class="tiempo-restante">12 días restantes</p>
+                    </div>
+                    
+                    <div class="acciones-proyecto">
+                        <button class="boton-donar">
+                            <img src="icono-corazon.png" alt="Corazón" class="icono-corazon">
+                            Donar ahora
+                        </button>
+                        <button class="boton-compartir">
+                            <img src="icono-compartir.png" alt="Compartir" class="icono-compartir">
+                            Compartir
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Proyecto urgente 2 -->
+                <div class="proyecto-urgente">
+                    <header class="encabezado-proyecto">
+                        <h3 class="nombre-proyecto">Programa nutricional escolar</h3>
+                        <div class="etiquetas-proyecto">
+                            <span class="etiqueta alta">High</span>
+                        </div>
+                    </header>
+                    <p class="descripcion-proyecto">Alimentación diaria para 500 escuelas rurales</p>
+                    
+                    <div class="progreso-proyecto">
+                        <p class="texto-progreso">Progreso: $89.000 de $120.000</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="74"></div>
+                        </div>
+                        <p class="tiempo-restante">45 días restantes</p>
+                    </div>
+                    
+                    <div class="acciones-proyecto">
+                        <button class="boton-donar">
+                            <img src="icono-corazon.png" alt="Corazón" class="icono-corazon">
+                            Donar ahora
+                        </button>
+                        <button class="boton-compartir">
+                            <img src="icono-compartir.png" alt="Compartir" class="icono-compartir">
+                            Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="pie-tarjeta">
+                <a href="#perfil-completo" class="enlace-perfil">Ver perfil completo</a>
+                <div class="acciones-fundacion">
+                    <button class="boton-seguir">
+                        <img src="icono-corazon-outline.png" alt="Seguir" class="icono-seguir">
+                        Seguir
+                    </button>
+                    <button class="boton-donacion-principal">Hacer donación</button>
+                </div>
+            </footer>
+        </article>
+        
+        <!-- Aquí se pueden añadir más tarjetas de fundaciones siguiendo la misma estructura -->
+    </main>
+    
+    <!-- Paginación -->
+    <nav class="paginacion">
+        <button class="boton-pagina anterior" disabled>Anterior</button>
+        <ul class="lista-paginas">
+            <li class="pagina actual"><a href="#pagina-1">1</a></li>
+            <li class="pagina"><a href="#pagina-2">2</a></li>
+            <li class="pagina"><a href="#pagina-3">3</a></li>
+            <li class="pagina"><a href="#pagina-4">4</a></li>
+            <li class="ellipsis">...</li>
+            <li class="pagina"><a href="#pagina-10">10</a></li>
+        </ul>
+        <button class="boton-pagina siguiente">Siguiente</button>
+    </nav>
+</body>
+</html>

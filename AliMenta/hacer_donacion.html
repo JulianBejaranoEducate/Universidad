@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliMenta - Hacer Donacion</title>
+</head>
+<body>
+    <!-- Encabezado con información de la fundación -->
+    <header class="encabezado-donacion">
+        <div class="navegacion-volver">
+            <a href="explorar_fundaciones.html" class="boton-volver">
+                <span class="icono-volver">←</span>
+                Volver
+            </a>
+        </div>
+        
+        <div class="info-fundacion">
+            <img src="logo-alimenta-esperanza.png" alt="Logo Alimenta Esperanza" class="logo-fundacion">
+            <div class="detalles-fundacion">
+                <h1 class="nombre-fundacion">Alimenta Esperanza</h1>
+                <div class="metadatos-fundacion">
+                    <span class="etiqueta-verificada">Verificada</span>
+                    <div class="calificacion">
+                        <img src="icono-estrella.png" alt="Calificación" class="icono-estrella">
+                        <span>4.9</span>
+                    </div>
+                    <span class="separador">•</span>
+                    <span class="ubicacion">Colombia, Venezuela</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="columna-izquierda">
+            <!-- Selección de proyecto -->
+            <section class="seccion-proyectos">
+                <h2 class="titulo-seccion">Selecciona un proyecto</h2>
+                
+                <!-- Proyecto 1 -->
+                <article class="proyecto-donable">
+                    <header class="encabezado-proyecto">
+                        <h3 class="nombre-proyecto">Crisis alimentaria en Venezuela</h3>
+                        <span class="etiqueta-critico">Crítico</span>
+                    </header>
+                    <p class="descripcion-proyecto">15.000 niños necesitan alimentación urgente</p>
+                    
+                    <div class="progreso-proyecto">
+                        <p class="texto-progreso">Progreso: $32.000 de $50.000</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="64"></div>
+                        </div>
+                        <p class="tiempo-restante">12 días restantes</p>
+                    </div>
+                    
+                    <p class="impacto-donacion">Cada $10 alimenta a un niño por una semana</p>
+                </article>
+                
+                <!-- Proyecto 2 -->
+                <article class="proyecto-donable">
+                    <header class="encabezado-proyecto">
+                        <h3 class="nombre-proyecto">Programa nutricional escolar</h3>
+                        <span class="etiqueta-alta">Alta prioridad</span>
+                    </header>
+                    <p class="descripcion-proyecto">Alimentación diaria para 500 escuelas rurales</p>
+                    
+                    <div class="progreso-proyecto">
+                        <p class="texto-progreso">Progreso: $89.000 de $120.000</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="74"></div>
+                        </div>
+                        <p class="tiempo-restante">45 días restantes</p>
+                    </div>
+                    
+                    <p class="impacto-donacion">Cada $25 alimenta a un niño por un mes</p>
+                </article>
+            </section>
+
+            <!-- Monto de donación -->
+            <section class="seccion-monto">
+                <h2 class="titulo-seccion">Monto de donación</h2>
+                
+                <div class="opciones-monto">
+                    <button class="opcion-monto">$25</button>
+                    <button class="opcion-monto">$50</button>
+                    <button class="opcion-monto">$100</button>
+                    <button class="opcion-monto">$250</button>
+                    <button class="opcion-monto">$500</button>
+                    <button class="opcion-monto">$1000</button>
+                </div>
+                
+                <div class="monto-personalizado">
+                    <label for="monto-personalizado" class="etiqueta-monto">Monto personalizado</label>
+                    <div class="campo-monto">
+                        <input type="text" id="monto-personalizado" placeholder="Ingresa tu monto" class="entrada-monto">
+                    </div>
+                </div>
+                
+                <div class="opcion-mensual">
+                    <input type="checkbox" id="donacion-mensual" class="checkbox-mensual">
+                    <label for="donacion-mensual" class="etiqueta-mensual">Hacer esta donación mensual</label>
+                </div>
+            </section>
+
+            <!-- Método de pago -->
+            <section class="seccion-pago">
+                <h2 class="titulo-seccion">Método de pago</h2>
+                
+                <div class="opciones-pago">
+                    <div class="opcion-metodo">
+                        <input type="radio" name="metodo-pago" id="tarjeta" class="radio-metodo" checked>
+                        <label for="tarjeta" class="etiqueta-metodo">
+                            <span class="icono-metodo">💳</span>
+                            Tarjeta de crédito/débito
+                        </label>
+                    </div>
+                    
+                    <div class="opcion-metodo">
+                        <input type="radio" name="metodo-pago" id="transferencia" class="radio-metodo">
+                        <label for="transferencia" class="etiqueta-metodo">
+                            <span class="icono-metodo">🏦</span>
+                            Transferencia bancaria
+                        </label>
+                    </div>
+                    
+                    <div class="opcion-metodo">
+                        <input type="radio" name="metodo-pago" id="movil" class="radio-metodo">
+                        <label for="movil" class="etiqueta-metodo">
+                            <span class="icono-metodo">📱</span>
+                            Pago móvil
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mensaje y opciones -->
+            <section class="seccion-mensaje">
+                <h2 class="titulo-seccion">Mensaje y opciones</h2>
+                
+                <div class="campo-mensaje">
+                    <label for="mensaje-fundacion" class="etiqueta-mensaje">Mensaje para la fundación (opcional)</label>
+                    <textarea id="mensaje-fundacion" class="entrada-mensaje" placeholder="Escribe un mensaje de apoyo..."></textarea>
+                </div>
+                
+                <div class="campo-adjunto">
+                    <label class="etiqueta-adjunto">Adjuntar comprobante o foto (opcional)</label>
+                    <button class="boton-subir">
+                        <span class="icono-subir">📁</span>
+                        Subir imagen
+                    </button>
+                </div>
+                
+                <div class="opciones-adicionales">
+                    <div class="opcion-adicional">
+                        <input type="checkbox" id="donacion-anonima" class="checkbox-opcion">
+                        <label for="donacion-anonima" class="etiqueta-opcion">Donación anónima</label>
+                    </div>
+                    
+                    <div class="opcion-adicional">
+                        <input type="checkbox" id="recibir-actualizaciones" class="checkbox-opcion" checked>
+                        <label for="recibir-actualizaciones" class="etiqueta-opcion">Recibir actualizaciones del proyecto</label>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="columna-derecha">
+            <!-- Resumen de donación -->
+            <section class="seccion-resumen">
+                <h2 class="titulo-resumen">Resumen de donación</h2>
+                
+                <div class="detalles-resumen">
+                    <div class="item-resumen">
+                        <span class="etiqueta-item">Proyecto:</span>
+                        <span class="valor-item">Crisis alimentaria en Venezuela</span>
+                    </div>
+                    
+                    <div class="item-resumen">
+                        <span class="etiqueta-item">Monto:</span>
+                        <span class="valor-item monto">$0</span>
+                    </div>
+                    
+                    <hr class="separador-resumen">
+                    
+                    <div class="item-resumen total">
+                        <span class="etiqueta-item">Total:</span>
+                        <span class="valor-item monto">$0</span>
+                    </div>
+                </div>
+                
+                <button class="boton-confirmar">
+                    <span class="icono-corazon">❤️</span>
+                    Confirmar donación
+                </button>
+            </section>
+
+            <!-- Confianza y transparencia -->
+            <section class="seccion-confianza">
+                <h2 class="titulo-confianza">
+                    <span class="icono-confianza">🛡️</span>
+                    Confianza y transparencia
+                </h2>
+                
+                <div class="indicador-transparencia">
+                    <p class="etiqueta-transparencia">Transparencia</p>
+                    <div class="valor-porcentaje">95%</div>
+                    <div class="barra-transparencia">
+                        <div class="nivel-transparencia" data-porcentaje="95"></div>
+                    </div>
+                </div>
+                
+                <div class="certificaciones">
+                    <p class="etiqueta-certificaciones">Certificaciones:</p>
+                    <ul class="lista-certificaciones">
+                        <li class="certificacion">
+                            <span class="icono-verificado">✓</span>
+                            ONU
+                        </li>
+                        <li class="certificacion">
+                            <span class="icono-verificado">✓</span>
+                            UNICEF
+                        </li>
+                        <li class="certificacion">
+                            <span class="icono-verificado">✓</span>
+                            Registro Nacional ONGs
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="calificacion-usuarios">
+                    <div class="estrellas">
+                        <span class="icono-estrella">⭐</span>
+                        4.9/5
+                    </div>
+                    <p class="base-calificacion">basado en 1,247 donaciones</p>
+                </div>
+            </section>
+
+            <!-- Impacto reciente -->
+            <section class="seccion-impacto">
+                <h2 class="titulo-impacto">Impacto reciente</h2>
+                
+                <ul class="lista-impactos">
+                    <li class="item-impacto">
+                        <span class="icono-impacto">👨‍👩‍👧‍👦</span>
+                        <p class="descripcion-impacto">2,340 alimentados esta semana</p>
+                    </li>
+                    
+                    <li class="item-impacto">
+                        <span class="icono-impacto">🏫</span>
+                        <p class="descripcion-impacto">15 nuevas escuelas incorporadas</p>
+                    </li>
+                    
+                    <li class="item-impacto">
+                        <span class="icono-impacto">🎯</span>
+                        <p class="descripcion-impacto">Meta mensual alcanzada al 87%</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <script>
+        // Script básico para actualizar el resumen al seleccionar elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aquí iría el código JavaScript para la interactividad
+            // como actualizar el resumen de donación, cambiar entre proyectos, etc.
+        });
+    </script>
+</body>
+</html>

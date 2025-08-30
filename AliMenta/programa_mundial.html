@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Mundial de Alimentos - AliMenta</title>
+</head>
+<body>
+    <header class="cabecera-principal">
+        <div class="logo-container">
+            <a href="Principal.html">
+                <img src="logo-alimenta.png" alt="Logo AliMenta" class="logo">
+            </a>
+        </div>
+        
+        <div class="opciones-usuario">
+            <button class="boton-configuracion">
+                <img src="icono-configuracion.png" alt="Configuración" class="icono">
+                Configuración
+            </button>
+            <a href="#perfil" class="perfil-usuario">
+                <img src="icono-usuario.png" alt="Perfil de usuario" class="avatar-usuario">
+            </a>
+        </div>
+    </header>
+
+    <!-- Información de la fundación -->
+    <section class="perfil-fundacion">
+        <div class="contenido-principal">
+            <div class="info-fundacion">
+                <div class="logo-fundacion">
+                    <img src="logo-pma.png" alt="Logo Programa Mundial de Alimentos" class="logo-grande">
+                </div>
+                
+                <div class="datos-fundacion">
+                    <h1 class="nombre-fundacion">Programa Mundial de Alimentos</h1>
+                    <p class="descripcion-fundacion">La organización humanitaria más grande del mundo que combate el hambre, proporcionando asistencia alimentaria en emergencias y trabajando con comunidades para mejorar la nutrición.</p>
+                    
+                    <div class="detalles-fundacion">
+                        <div class="ubicacion">
+                            <img src="icono-ubicacion.png" alt="Ubicación" class="icono-detalle">
+                            <span>Roma, Italia</span>
+                        </div>
+                        
+                        <div class="fundacion-year">
+                            <img src="icono-fundacion.png" alt="Año de fundación" class="icono-detalle">
+                            <span>Fundada en 1961</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accion-perfil">
+                <button class="boton-editar-perfil">
+                    <img src="icono-editar.png" alt="Editar" class="icono-editar">
+                    Editar Perfil
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas principales -->
+    <section class="estadisticas-fundacion">
+        <div class="contenedor-estadisticas">
+            <article class="tarjeta-estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Personas Asistidas</h3>
+                    <p class="valor-estadistica">128M</p>
+                </div>
+                <div class="icono-estadistica">
+                    <img src="icono-personas.png" alt="Personas" class="icono-estadistica">
+                </div>
+            </article>
+
+            <article class="tarjeta-estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Donaciones Recibidas</h3>
+                    <p class="valor-estadistica">$2.4M</p>
+                </div>
+                <div class="icono-estadistica">
+                    <img src="icono-donaciones.png" alt="Donaciones" class="icono-estadistica">
+                </div>
+            </article>
+
+            <article class="tarjeta-estadistica">
+                <div class="contenido-estadistica">
+                    <h3 class="titulo-estadistica">Proyectos Activos</h3>
+                    <p class="valor-estadistica">24</p>
+                </div>
+                <div class="icono-estadistica">
+                    <img src="icono-proyectos.png" alt="Proyectos" class="icono-estadistica">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Navegación por pestañas -->
+    <nav class="navegacion-pestanas">
+        <ul class="menu-pestanas">
+            <li class="item-pestana activo"><a href="#proyectos">Proyectos</a></li>
+            <li class="item-pestana"><a href="#donaciones">Donaciones</a></li>
+            <li class="item-pestana"><a href="#impacto">Impacto</a></li>
+            <li class="item-pestana"><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de las pestañas -->
+    <!-- 1. PESTAÑA PROYECTOS (Visible por defecto) -->
+    <section id="proyectos" class="contenido-pestana activo">
+        <header class="encabezado-seccion">
+            <h2 class="titulo-seccion">Proyectos Activos</h2>
+            <button class="boton-nuevo-proyecto">
+                <span class="icono-agregar">+</span>
+                Nuevo Proyecto
+            </button>
+        </header>
+        
+        <div class="lista-proyectos">
+            <article class="tarjeta-proyecto">
+                <div class="contenido-proyecto">
+                    <h3 class="titulo-proyecto">Asistencia Alimentaria - Siria</h3>
+                    <p class="descripcion-proyecto">Programa de emergencia para familias desplazadas</p>
+                    
+                    <div class="estado-proyecto">
+                        <p class="etiqueta-progreso">Progreso</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="75"></div>
+                        </div>
+                        <p class="porcentaje-progreso">75%</p>
+                    </div>
+                    
+                    <div class="datos-financieros">
+                        <h4 class="monto-recaudado">$1.2M</h4>
+                        <p class="etiqueta-financiera">Fondos recaudados</p>
+                    </div>
+                    
+                    <a href="#detalles-proyecto" class="ver-detalles">Ver Detalles</a>
+                </div>
+            </article>
+            
+            <article class="tarjeta-proyecto">
+                <div class="contenido-proyecto">
+                    <h3 class="titulo-proyecto">Asistencia Alimentaria - Siria</h3>
+                    <p class="descripcion-proyecto">Programa de emergencia para familias desplazadas</p>
+                    
+                    <div class="estado-proyecto">
+                        <p class="etiqueta-progreso">Progreso</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="75"></div>
+                        </div>
+                        <p class="porcentaje-progreso">75%</p>
+                    </div>
+                    
+                    <div class="datos-financieros">
+                        <h4 class="monto-recaudado">$1.2M</h4>
+                        <p class="etiqueta-financiera">Fondos recaudados</p>
+                    </div>
+                    
+                    <a href="#detalles-proyecto" class="ver-detalles">Ver Detalles</a>
+                </div>
+            </article>
+            
+            <article class="tarjeta-proyecto">
+                <div class="contenido-proyecto">
+                    <h3 class="titulo-proyecto">Asistencia Alimentaria - Siria</h3>
+                    <p class="descripcion-proyecto">Programa de emergencia para familias desplazadas</p>
+                    
+                    <div class="estado-proyecto">
+                        <p class="etiqueta-progreso">Progreso</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="75"></div>
+                        </div>
+                        <p class="porcentaje-progreso">75%</p>
+                    </div>
+                    
+                    <div class="datos-financieros">
+                        <h4 class="monto-recaudado">$1.2M</h4>
+                        <p class="etiqueta-financiera">Fondos recaudados</p>
+                    </div>
+                    
+                    <a href="#detalles-proyecto" class="ver-detalles">Ver Detalles</a>
+                </div>
+            </article>
+            
+            <article class="tarjeta-proyecto">
+                <div class="contenido-proyecto">
+                    <h3 class="titulo-proyecto">Asistencia Alimentaria - Siria</h3>
+                    <p class="descripcion-proyecto">Programa de emergencia para familias desplazadas</p>
+                    
+                    <div class="estado-proyecto">
+                        <p class="etiqueta-progreso">Progreso</p>
+                        <div class="barra-progreso">
+                            <div class="progreso" data-porcentaje="75"></div>
+                        </div>
+                        <p class="porcentaje-progreso">75%</p>
+                    </div>
+                    
+                    <div class="datos-financieros">
+                        <h4 class="monto-recaudado">$1.2M</h4>
+                        <p class="etiqueta-financiera">Fondos recaudados</p>
+                    </div>
+                    
+                    <a href="#detalles-proyecto" class="ver-detalles">Ver Detalles</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- 2. PESTAÑA DONACIONES (Oculta inicialmente) -->
+    <section id="donaciones" class="contenido-pestana">
+        <header class="encabezado-seccion">
+            <h2 class="titulo-seccion">Historial de Donaciones</h2>
+        </header>
+        
+        <div class="contenedor-donaciones">
+            <section class="donaciones-recientes">
+                <h3 class="subtitulo-seccion">Donaciones Recientes</h3>
+                <p class="descripcion-seccion">Últimas contribuciones recibidas</p>
+                
+                <ul class="lista-donaciones">
+                    <li class="item-donacion">
+                        <div class="identificador-donador">D1</div>
+                        <div class="info-donacion">
+                            <h4 class="nombre-donador">Donador 1</h4>
+                            <p class="tipo-donacion">Donación individual</p>
+                        </div>
+                        <div class="detalles-donacion">
+                            <p class="monto-donacion">$250</p>
+                            <p class="tiempo-donacion">Hace 2 horas</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-donacion">
+                        <div class="identificador-donador">D1</div>
+                        <div class="info-donacion">
+                            <h4 class="nombre-donador">Donador 1</h4>
+                            <p class="tipo-donacion">Donación individual</p>
+                        </div>
+                        <div class="detalles-donacion">
+                            <p class="monto-donacion">$250</p>
+                            <p class="tiempo-donacion">Hace 2 horas</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-donacion">
+                        <div class="identificador-donador">D1</div>
+                        <div class="info-donacion">
+                            <h4 class="nombre-donador">Donador 1</h4>
+                            <p class="tipo-donacion">Donación individual</p>
+                        </div>
+                        <div class="detalles-donacion">
+                            <p class="monto-donacion">$250</p>
+                            <p class="tiempo-donacion">Hace 2 horas</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-donacion">
+                        <div class="identificador-donador">D1</div>
+                        <div class="info-donacion">
+                            <h4 class="nombre-donador">Donador 1</h4>
+                            <p class="tipo-donacion">Donación individual</p>
+                        </div>
+                        <div class="detalles-donacion">
+                            <p class="monto-donacion">$250</p>
+                            <p class="tiempo-donacion">Hace 2 horas</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    
+    <!-- 3. PESTAÑA IMPACTO (Oculta inicialmente) -->
+    <section id="impacto" class="contenido-pestana">
+        <header class="encabezado-seccion">
+            <h2 class="titulo-seccion">Reporte de Impacto</h2>
+        </header>
+        
+        <div class="contenedor-impacto">
+            <!-- Impacto por región -->
+            <section class="impacto-region">
+                <header class="encabezado-subseccion">
+                    <h3 class="titulo-subseccion">Impacto por Región</h3>
+                    <p class="descripcion-subseccion">Distribución geográfica de nuestro trabajo</p>
+                </header>
+                
+                <ul class="lista-impacto-regiones">
+                    <li class="item-impacto">
+                        <div class="info-impacto">
+                            <h4 class="nombre-region">África Subsahariana</h4>
+                            <div class="barra-impacto">
+                                <div class="nivel-impacto" data-porcentaje="75"></div>
+                            </div>
+                        </div>
+                        <div class="estadistica-impacto">
+                            <p class="valor-impacto">45M personas</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-impacto">
+                        <div class="info-impacto">
+                            <h4 class="nombre-region">Medio Oriente</h4>
+                            <div class="barra-impacto">
+                                <div class="nivel-impacto" data-porcentaje="60"></div>
+                            </div>
+                        </div>
+                        <div class="estadistica-impacto">
+                            <p class="valor-impacto">32M personas</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-impacto">
+                        <div class="info-impacto">
+                            <h4 class="nombre-region">Asia</h4>
+                            <div class="barra-impacto">
+                                <div class="nivel-impacto" data-porcentaje="50"></div>
+                            </div>
+                        </div>
+                        <div class="estadistica-impacto">
+                            <p class="valor-impacto">28M personas</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-impacto">
+                        <div class="info-impacto">
+                            <h4 class="nombre-region">América Latina</h4>
+                            <div class="barra-impacto">
+                                <div class="nivel-impacto" data-porcentaje="40"></div>
+                            </div>
+                        </div>
+                        <div class="estadistica-impacto">
+                            <p class="valor-impacto">23M personas</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Tipos de asistencia -->
+            <section class="tipos-asistencia">
+                <header class="encabezado-subseccion">
+                    <h3 class="titulo-subseccion">Tipos de Asistencia</h3>
+                    <p class="descripcion-subseccion">Modalidades de ayuda proporcionada</p>
+                </header>
+                
+                <ul class="lista-tipos-asistencia">
+                    <li class="item-tipo-asistencia">
+                        <div class="info-asistencia">
+                            <h4 class="nombre-asistencia">Transferencias de efectivo</h4>
+                            <div class="barra-asistencia">
+                                <div class="nivel-asistencia" data-porcentaje="40"></div>
+                            </div>
+                        </div>
+                        <div class="porcentaje-asistencia">
+                            <p>40%</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-tipo-asistencia">
+                        <div class="info-asistencia">
+                            <h4 class="nombre-asistencia">Distribución de alimentos</h4>
+                            <div class="barra-asistencia">
+                                <div class="nivel-asistencia" data-porcentaje="35"></div>
+                            </div>
+                        </div>
+                        <div class="porcentaje-asistencia">
+                            <p>35%</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-tipo-asistencia">
+                        <div class="info-asistencia">
+                            <h4 class="nombre-asistencia">Alimentación escolar</h4>
+                            <div class="barra-asistencia">
+                                <div class="nivel-asistencia" data-porcentaje="15"></div>
+                            </div>
+                        </div>
+                        <div class="porcentaje-asistencia">
+                            <p>15%</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-tipo-asistencia">
+                        <div class="info-asistencia">
+                            <h4 class="nombre-asistencia">Nutrición especializada</h4>
+                            <div class="barra-asistencia">
+                                <div class="nivel-asistencia" data-porcentaje="10"></div>
+                            </div>
+                        </div>
+                        <div class="porcentaje-asistencia">
+                            <p>10%</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    
+    <!-- 4. PESTAÑA CONTACTO (Oculta inicialmente) -->
+    <section id="contacto" class="contenido-pestana">
+        <header class="encabezado-seccion">
+            <h2 class="titulo-seccion">Información de Contacto</h2>
+        </header>
+        
+        <div class="contenedor-contacto">
+            <!-- Contacto principal -->
+            <section class="contacto-principal">
+                <h3 class="subtitulo-seccion">Contacto Principal</h3>
+                <p class="descripcion-seccion">Información de contacto para donantes</p>
+                
+                <ul class="lista-contactos">
+                    <li class="item-contacto">
+                        <div class="icono-contacto">
+                            <img src="icono-email.png" alt="Email" class="icono">
+                        </div>
+                        <div class="info-contacto">
+                            <h4 class="tipo-contacto">donaciones@wfp.org</h4>
+                            <p class="descripcion-contacto">Correo para donaciones</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-contacto">
+                        <div class="icono-contacto">
+                            <img src="icono-telefono.png" alt="Teléfono" class="icono">
+                        </div>
+                        <div class="info-contacto">
+                            <h4 class="tipo-contacto">+39 06 65131</h4>
+                            <p class="descripcion-contacto">Oficina principal</p>
+                        </div>
+                    </li>
+                    
+                    <li class="item-contacto">
+                        <div class="icono-contacto">
+                            <img src="icono-ubicacion.png" alt="Dirección" class="icono">
+                        </div>
+                        <div class="info-contacto">
+                            <h4 class="tipo-contacto">Via Cesare Giulio Viola, 68</h4>
+                            <p class="descripcion-contacto">Roma, Italia 00148</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="transparencia">
+                <h3 class="subtitulo-seccion">Transparencia</h3>
+                <p class="descripcion-seccion">Documentos y reportes públicos</p>
+                
+                <ul class="lista-documentos">
+                    <li class="item-documento">
+                        <a href="#reporte-anual" class="enlace-documento">Reporte Anual 2023</a>
+                    </li>
+                    
+                    <li class="item-documento">
+                        <a href="#estados-financieros" class="enlace-documento">Estados Financieros</a>
+                    </li>
+                    
+                    <li class="item-documento">
+                        <a href="#certificaciones" class="enlace-documento">Certificaciones</a>
+                    </li>
+                    
+                    <li class="item-documento">
+                        <a href="#politicas" class="enlace-documento">Políticas de Transparencia</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+</body>
+</html>

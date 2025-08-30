@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Estilos</title>
+</head>
+<body>
+    <!-- 
+        Formas de trabajar con css / estilos:
+        1. A traves de la etiqueta style.
+        2. Como propiedad de la etiqueta.
+        3. A traves de un archivo contenedor de los estilos - externo.
+        4. Selectores de CSS
+            - Por etiqueta:
+            - Por clase
+            - Por ID
+            - Universal
+    -->
+    <header class="header" id="header" style="background-color: lightcoral; border: 2px solid black"> <!-- valor y valor de la propiedad, pero son malas practicas -->
+        <h1 class="titulo" id="titulo">Noticias</h1>
+        <nav class="navegacion" id="navegacion">
+            <!-- Etiqueta de lista "ul>li*3>a" -->
+            <ul>
+                <li><a href="#seccion1">Deportes</a></li> <!-- Etiqueta de hipervinculo "a" enlace -->
+                <li><a href="#seccion2">Ciencia</a></li>
+                <li><a href="#seccion3">Programacion</a></li>
+                <li><a href="./2.BuenasPracticas.html">Buenas practicas</a></li>
+                <li><a href="https://google.com">Google</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section> <!-- Etiqueta de seccion "section*3>arcticle" "section.seccion#seccion*3>arcticle>h2+p*2"-->
+            <article></article>
+        </section>
+        <section>
+            <article></article>
+        </section>
+        <section>
+            <article></article>
+        </section>
+
+        <section class="seccion seccion1" id="seccion">
+            <h2>Deportes</h2>
+            <arcticle class="articulo articulo1">
+                <h3>Derrota del PSG vs Chelsea</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur beatae consectetur animi ut sequi error explicabo repellat nemo voluptates id, delectus fugiat illum excepturi est, aspernatur, dolores quia magnam!
+                Iste ex voluptates incidunt fugiat illum harum maiores rem veniam cumque ipsa, quod cum, itaque sapiente optio modi. Dolore in ex soluta repellendus amet corporis! Iusto minima quo corporis sint?</p>
+                <h3>La final de la Champions 2026</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptatibus? Libero eum velit dolor molestias aliquid omnis, quibusdam culpa similique? Dolore illo ducimus, consequuntur qui inventore aspernatur blanditiis ex voluptatum?</p>
+            </arcticle>
+        </section>
+        <section class="seccion seccion2" id="seccion">
+            <h2>Ciencia</h2>
+            <arcticle class="articulo articulo2">
+                <h3>La vacuna contra la rabia</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat qui, iure facere eum quo amet? Accusantium excepturi hic quis pariatur suscipit fugiat architecto, ullam minima beatae numquam sunt consequuntur officia!</p>
+                <h3>Covid22</h3>
+                <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, a.</small> Optio consequatur necessitatibus delectus possimus unde quaerat neque aliquam quasi nihil, eos accusamus sed id blanditiis quidem expedita enim. Inventore.</p>
+            </arcticle>
+        </section>
+        <section class="seccion seccion"3 id="seccion">
+            <h2>Programacion</h2>
+            <arcticle class="articulo articulo3">
+                <h3><strong><u>C# el duro</u><i>para los Video Juegos</i></strong></h3>
+                <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em> Accusantium veniam dolorem eum eveniet necessitatibus quis, aliquam quam, quia laudantium sequi odit, quae commodi fuga ex modi magnam pariatur itaque expedita?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde, velit pariatur hic quam labore vero eos sed, natus cum quo tempore! Officiis maiores labore sequi tenetur modi nulla ipsa?</p>
+                <p>
+                    const calculatePower = (num1) =>{
+                                    return Math.pow(num1,2)
+                                }
+                </p><br>
+                <figure>
+                    <code>
+                        <pre>
+                                const calculatePower = (num1) =>{
+                                    return Math.pow(num1,2)
+                                }
+                        </pre>
+                    </code>
+                    <figcaption>Funcion tipo flecha de JS que calcula el cuadrado de un numero</figcaption>
+                </figure>
+            </arcticle>
+        </section>
+        <form>
+            <label for="correo">Introduzca el correo</label>
+            <input type="email" name="correo" id="correo" required placeholder="Ingrese su correo electronico"> <!-- Una advertencia para el usuario en caso de que no  -->
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ab iusto necessitatibus quisquam repudiandae quod voluptate voluptatum nobis sequi eum fugit excepturi, quasi fugiat a, adipisci, doloribus molestiae voluptas eos!</div>
+        <div class="reloj">Explicación de las manecillas del reloj: Las manecillas de un reloj,
+        también conocidas como agujas, giran en sentido horario, que es el mismo
+        sentido en el que giran las sombras en un reloj de sol en el hemisferio
+        norte. Este sentido de giro, también llamado dextrógiro, va de izquierda
+        a derecha. Explicación detallada: Sentido Horario: El sentido en el que
+        las manecillas del reloj se mueven es hacia la derecha, siguiendo la
+        dirección de los números crecientes en el cuadrante del reloj. Origen
+        Histórico: Este sentido de giro se adoptó por influencia de los relojes
+        de sol, donde la sombra proyectada por el gnomon (la parte que da la
+        sombra) se mueve en sentido horario en el hemisferio norte. Hemisferio
+        Norte: En el hemisferio norte, la posición aparente del sol hace que la
+        sombra se desplace de izquierda a derecha en un reloj de sol horizontal.
+        Sentido Contrario: Aunque en el hemisferio sur la sombra en un reloj de
+        sol se mueve en sentido antihorario, la convención internacional para
+        los relojes mecánicos se basó en el sentido del hemisferio norte.</div>
+    </main>
+    <footer>
+        <p>Todos los derechos de autor son reservados 2025 UE</p> <!-- <p> Etiqueta de parrafo -->
+    </footer>
+    <style>
+        #header{
+            background-color: #0d0b24db;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1 class="styleRed" onmouseover="capaturaMouseOver()">Mouse y Teclado</h1>
+
+    <p id="parrafo" class="parrafo" onmouseover="capturaMove()">Las funciones o metodos son acciones que se pueden realizar, con cada uno de los elementos html. Las propiedades son valores de los elementos HTML que pueden ser asginados o moficados.</p>
+
+    <p id="pregunta" class="parrafo" onmousemove="capturaMouseOut()">¿Esta de acuerdo con la afirmacion?</p>
+
+    <p id="indicacion">Colocar la respuesta en la caja de texto</p>
+
+    <label for="respuesta">Respuesta:</label>
+    <input type="text" id="respuesta" name="respuesta" onkeyup="soltarTecla()" onkeypress="presionarTecla()" onkeydown="funcionInput()"> <br><br>
+
+    <button id="confirmar" name="btnRespuesta" onclick="capturaClick()">Enviar respuesta</button>
+    <button id="teclado">Presiona con una tecla</button>
+    <button ondblclick="capturaDobleClick()">Presiona dlclick</button>
+
+    <script src="./dist/mouse.js"></script>
+    <script src="./dist/keyboard.js"></script>
+</body>
+</html>

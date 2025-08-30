@@ -1,0 +1,80 @@
+<main class="container mt-5">
+    <section class="card shadow rounded">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">{{ editingTask ? 'Editar Tarea' : 'Agregar Nueva Tarea' }}</h2>
+        </div>
+        <div class="card-body">
+            <form class="col-form-label-lg">
+                <div class="mb-3 row">
+                    <label for="id" class="col-sm-2 col-form-label">ID</label>
+                    <div class="col-sm-10">
+                        <input #id type="number" id="id" class="form-control" placeholder="Ej: 1" [value]="editingTask?.id || ''">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="title" class="col-sm-2 col-form-label">Titulo</label>
+                    <div class="col-sm-10">
+                        <input #tittle type="text" id="title" class="form-control" placeholder="Ej: Estudiar" [value]="editingTask?.title || ''">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Completada</label>
+                    <div class="col-sm-10 d-flex align-items-center">
+                        <div class="form-check form-switch">
+                            <div class="form-check form-switch">
+                                <input #completed type="checkbox" id="completed" class="form-check-input" [checked]="editingTask?.compled || false">
+                                <label for="completed" class="form-check-label">Si / No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="category" class="col-sm-2 col-form-label">Categoria</label>
+                    <div class="col-sm-10">
+                        <input #category type="text" id="category" class="form-control" placeholder="Ej: Salud" [value]="editingTask?.category || ''">
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <button *ngIf="!editingTask" type="button" class="btn btn-success"
+                        (click)="save(+id.value, tittle.value, completed.checked, category.value)">
+                        Guardar Tarea
+                    </button>
+                    <ng-container *ngIf="editingTask">
+                        <button type="button" class="btn btn-primary me-2"
+                            (click)="update(+id.value, tittle.value, completed.checked, category.value)">
+                            Actualizar Tarea
+                        </button>
+                        <button type="button" class="btn btn-secondary" (click)="cancelEdit()">
+                            Cancelar
+                        </button>
+                    </ng-container>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="container mt-4" *ngIf="tasks.length > 0">
+        <h2>Tareas Guardadas</h2>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let task of tasks">
+                <div>
+                    <strong> # {{task.id}}:</strong> {{task.title}}
+                    <span class="badge bg-success ms-2" *ngIf="task.compled">Completada</span>
+                    <span class="badge bg-secondary" *ngIf="!task.compled">Pendiente</span>
+                    <span class="text-muted ms-3" *ngIf="task.category">[{{ task.category }}]</span>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-sm btn-outline-primary me-2" (click)="startEdit(task)">
+                        <i class="bi bi-pencil"></i> Editar
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="delete(task.id)">
+                        <i>Eliminar</i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </section>
+</main>

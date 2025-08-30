@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.imagen {
+    padding: 0.2in;
+    width: 30%;
+    height: 50%;
+}
+
+.centrar {
+    padding: 10px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blueviolet;
+}

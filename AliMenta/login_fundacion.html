@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliMenta - Iniciar Sesión</title>
+</head>
+<body>
+    <!-- Navegación superior -->
+    <header>
+        <nav class="volver-inicio">
+            <a href="Principal.html">
+                <span class="icono-flecha">←</span>
+                Volver al inicio
+            </a>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal del login -->
+    <main class="contenedor-login">
+        <header class="logo">
+            <img src="logo-alimenta.png" alt="Logo AliMenta">
+        </header>
+
+        <section class="titulo-bienvenida">
+            <h1>Bienvenido de vuelta</h1>
+            <p>Inicia sesión para continuar ayudando</p>
+        </section>
+
+        <nav class="selector-usuario">
+            <div class="opciones-usuario">
+                <a href="login_usuario.html" class="opcion-usuario" id="btn-donador" role="button">
+                    <span class="icono-donador">👤</span>
+                    Donador
+                </a>
+                <a href="login_fundacion.html" class="opcion-usuario activo" id="btn-fundacion" role="button">
+                    <span class="icono-fundacion">🏢</span>
+                    Fundación
+                </a>
+            </div>
+        </nav>
+
+        <section class="formulario-acceso" id="acceso-fundacion">
+            <h2>Acceso para Fundaciones</h2>
+            <p>Gestiona tu perfil y proyectos para recibir donaciones</p>
+            
+            <form>
+                <fieldset class="campo-formulario">
+                    <label for="correo-fundacion">Correo electrónico</label>
+                    <input type="email" id="correo-fundacion" name="correo" placeholder="Ingresa tu correo" required>
+                </fieldset>
+                
+                <fieldset class="campo-formulario">
+                    <label for="contrasena-donador">Contraseña</label>
+                    <input type="password" id="contrasena-fundacion" name="contrasena" placeholder="Ingresa tu contraseña" required>
+                </fieldset>
+                
+                <div class="recuperar-contrasena">
+                    <a href="#recuperar">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <div class="boton-iniciar">
+                    <button type="submit">Iniciar sesión</button>
+                </div>
+            </form>
+            
+            <aside class="registrarse">
+                <p>¿Tu fundación no está registrada?</p>
+                <a href="#registrar-fundacion">Registrar fundación</a>
+            </aside>
+        </section>
+    </main>
+
+    <!-- Información de seguridad -->
+    <footer class="seguridad">
+        <div class="icono-seguridad">
+            <img src="icono-seguridad.png" alt="Icono de seguridad">
+        </div>
+        <div class="texto-seguridad">
+            <h3>Conexión segura</h3>
+            <p>Tus datos están protegidos con encriptación de extremo a extremo</p>
+        </div>
+    </footer>
+</body>
+</html>

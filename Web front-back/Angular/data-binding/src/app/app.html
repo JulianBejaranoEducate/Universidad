@@ -1,0 +1,25 @@
+<app-header></app-header>
+<main class="container container-fluid">
+    <section class="interpolar">
+        <p>La interpolación de datos: se declaran propiedades o atributos y mediante el doble mostachos se coloca el valor:</p>
+        <p>{{getData()}}</p>
+    </section>
+
+    <section class="propiedades">
+        <p>Se pasa valores a los atributos de las etiquetas en el DOM "template"</p>
+        <label for="edad">Edad:</label>
+        <input type="number" name="" id="edad" [value]="edad" placeholder="Ingrese el valor">
+    </section>
+
+    <section class="">
+        <button (Click)="getEvento()">Evento Click</button>
+    </section><br>
+
+    <div>
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" [(ngModel)]="nombre"><br>
+        <p>{{nombre}}</p>
+    </div>
+</main>
+<app-footer></app-footer>
+<!-- Terminar de diseñar, maquillaje -->

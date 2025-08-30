@@ -1,0 +1,28 @@
+/*Estos son comentarios*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.seccion, .div{ /*Agrupacion de selecctores*/ 
+    padding: 2%;
+    font-size: 18px;
+}
+
+.seccion1{
+    background-color: yellow;
+}
+
+.seccion1, .div{ /*Agrupacion de selecctores*/
+    background-color: lightblue;
+}
+
+.reloj{
+    border: 2px solid black;
+    padding: 40px 10px 50px;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-right: 10%;
+    margin-left: 15%;
+}

@@ -1,0 +1,40 @@
+/*Seleccion por atributos*/
+[class]{
+    padding: 2%;
+    margin-right: 5%;
+}
+
+/*Combinar etiqueta con atributo*/
+a[href]{
+    color: blueviolet;
+    font-size: 22px;
+}
+
+/*Combinacion con sufijos*/ /*Selecciona los elementos de terminación*/
+a[href$=".com"]{
+    text-align: left;
+    color: fuchsia;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/*Combinacion con prefijo*/ /*Selecciona los elementos de inicio*/
+article[class^="art"]{ 
+    text-align: justify;
+    color: green;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.secciones ~ article{ /*Son hermanos, porque estan en la misma jerarquía*/
+    background-color: lightblue;
+    padding: 2%;
+    margin: 1%;
+}
+
+/*
+    Proxima clase, tarea:
+    - Buscar más combinadores, minimo 10 combinadores
+*/
+
+/*Combinador hermamno adyecente*/
