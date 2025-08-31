@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+    <div id="header-placeholder"></div>
+
     <header>
         <h1>Orquidea</h1>
     </header>
@@ -22,5 +24,18 @@
             <a href="../../index.html">Volver al inicio</a>
         </section>
     </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <br>
+    <script>
+        fetch('../header/header.html')
+            .then(respuesta => respuesta.text())
+            .then(dato => document.getElementById('header-placeholder').innerHTML = dato);
+
+        fetch('../../pages/footer/footer.html')
+            .then(respuesta => respuesta.text())
+            .then(dato => document.getElementById('footer-placeholder').innerHTML = dato);
+    </script>
 </body>
 </html>
