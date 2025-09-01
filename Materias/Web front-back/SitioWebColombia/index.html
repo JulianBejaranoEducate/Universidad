@@ -408,20 +408,27 @@
         </section>
     </main>
 
-    <header>
-        <h1>Departamentos de Colombia</h1>
-    </header>
-
-    <main>
-        <h2>Lista de Departamentos</h2>
-        <p>Datos consumidos desde la API de Colombia.</p>
-        
-        <div id="loading-message">Cargando datos...</div>
-        
-        <ul id="departamentos-lista">
-            <!-- Los departamentos se insertarán aquí con JavaScript -->
-        </ul>
-    </main>
+    <!-- Sección de Departamentos de Colombia -->
+    <section class="departamentos-colombia" id="departamentos">
+        <article>
+            <div class="texto-departamentos">
+                <header class="header">
+                    <h2>Departamentos de Colombia</h2>
+                </header>
+                <p>Datos consumidos desde la API de Colombia.</p>
+                <p>Colombia está dividida en 32 departamentos y un distrito capital. Cada departamento tiene su propia identidad cultural, geográfica y demográfica que contribuye a la riqueza de nuestro país.</p>
+            </div>
+            
+            <div id="loading-message" class="loading-message">
+                <div class="spinner"></div>
+                <p>Cargando datos de los departamentos...</p>
+            </div>
+            
+            <div class="contenedor-departamentos" id="departamentos-lista">
+                <!-- Los departamentos se insertarán aquí con JavaScript -->
+            </div>
+        </article>
+    </section>
 
     <script src="./js/main.js"></script>
 
