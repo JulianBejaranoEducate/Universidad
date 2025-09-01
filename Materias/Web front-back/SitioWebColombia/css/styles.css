@@ -781,3 +781,10 @@ h2 {
     font-weight: 600;
     color: #FFD700;
 }
+
+/* Medias query */
+@media(min-width: 800px) and (max-width: 1280px){
+    .menu ul {
+        gap: 20px;
+    }
+}
