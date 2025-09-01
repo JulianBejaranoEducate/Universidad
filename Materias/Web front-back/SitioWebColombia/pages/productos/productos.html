@@ -3,43 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Viva Colombiana</title>
-    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Productos Colombianos - Colombia Viva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="../../images/icono-logo/colombia_viva.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/productos/productos.css">
 </head>
 <body>
     <!-- Implementar Header -->
     <div id="header-placeholder"></div>
 
-    <header>
-        <h1>Productos</h1>
-    </header>
-
     <main>
-        <section>
-            <h2>Productos de Colombia</h2>
-            <img src="../../images/biodiversidad/animales/rana-dorada.jpg" alt="Foto de Rana Dorada">
-            <p>
-                Aquí puedes agregar toda la información detallada sobre Carlos Vives,
-                su discografía, su impacto en la música y mucho más.
-            </p>
-            <a href="../../index.html">Volver al inicio</a>
+        <!-- Hero Section -->
+        <section class="hero-productos">
+            <div class="hero-content">
+                <h1>Productos de Colombia</h1>
+                <p class="hero-subtitle">Descubre la riqueza y calidad de los productos colombianos</p>
+                <div class="hero-buttons">
+                    <a href="#cafe" class="btn btn-primary">Ver Café</a>
+                    <a href="#artesanias" class="btn btn-secondary">Ver Artesanías</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introducción -->
+        <section class="introduccion" id="introduccion">
+            <article class="introduccion-content">
+                <div class="texto">
+                    <header class="header">
+                        <h2>Productos de Calidad Mundial</h2>
+                    </header>
+                    <p>
+                        Colombia es reconocida mundialmente por la excelencia y calidad de sus productos. 
+                        Desde el café más aromático hasta las artesanías más elaboradas, nuestro país 
+                        ofrece una variedad única que refleja la riqueza cultural y natural de nuestra tierra.
+                    </p>
+                    <p>
+                        Cada producto colombiano lleva consigo la historia, la tradición y el amor 
+                        de nuestro pueblo, convirtiéndolos en embajadores de nuestra identidad nacional.
+                    </p>
+                </div>
+                <div class="imagen">
+                    <img src="../../images/productos/productos-colombia-montage.jpg" alt="Productos de Colombia" onerror="this.style.display='none'">
+                </div>
+            </article>
+        </section>
+
+        <!-- Café Colombiano -->
+        <section class="cafe-productos" id="cafe">
+            <article>
+                <div class="texto-seccion">
+                    <header class="header">
+                        <h2>Café Colombiano Premium</h2>
+                    </header>
+                    <p>
+                        El café colombiano es reconocido mundialmente por su calidad excepcional, 
+                        aroma inconfundible y sabor suave. Cultivado en las montañas de los Andes, 
+                        nuestro café representa la tradición y excelencia de generaciones de caficultores.
+                    </p>
+                </div>
+                <div class="contenedor-tarjetas">
+                    <article class="producto-card">
+                        <figure>
+                            <img src="../../images/productos/cafe/cafe-premium.jpg" alt="Café Premium" onerror="this.style.display='none'">
+                            <figcaption>Café Premium</figcaption>
+                        </figure>
+                        <p>Granos seleccionados de las mejores fincas cafeteras del país.</p>
+                        <div class="precio">$45.000 COP</div>
+                        <a href="#" class="btn-comprar">Comprar Ahora</a>
+                    </article>
+
+                    <article class="producto-card">
+                        <figure>
+                            <img src="../../images/productos/cafe/cafe-organico.jpg" alt="Café Orgánico" onerror="this.style.display='none'">
+                            <figcaption>Café Orgánico</figcaption>
+                        </figure>
+                        <p>Cultivado sin químicos, respetando el medio ambiente y las tradiciones.</p>
+                        <div class="precio">$52.000 COP</div>
+                        <a href="#" class="btn-comprar">Comprar Ahora</a>
+                    </article>
+
+                    <article class="producto-card">
+                        <figure>
+                            <img src="../../images/productos/cafe/cafe-especial.jpg" alt="Café de Especialidad" onerror="this.style.display='none'">
+                            <figcaption>Café de Especialidad</figcaption>
+                        </figure>
+                        <p>Edición limitada con notas florales y frutales únicas.</p>
+                        <div class="precio">$68.000 COP</div>
+                        <a href="#" class="btn-comprar">Comprar Ahora</a>
+                    </article>
+                </div>
+            </article>
+        </section>
+
+        <!-- Artesanías -->
+        <section class="artesanias-productos" id="artesanias">
+            <article>
+                <div class="texto-seccion">
+                    <header class="header">
+                        <h2>Artesanías Tradicionales</h2>
+                    </header>
+                    <p>
+                        Las artesanías colombianas son el resultado de siglos de tradición y creatividad. 
+                        Cada pieza es única, hecha a mano por artesanos que preservan las técnicas 
+                        ancestrales de nuestros pueblos originarios.
+                    </p>
+                </div>
+                <div class="contenedor-tarjetas">
+                    <article class="producto-card">
+                        <figure>
+                            <img src="../../images/productos/artesanias/mochila-wayuu.jpg" alt="Mochila Wayuu" onerror="this.style.display='none'">
+                            <figcaption>Mochila Wayuu</figcaption>
+                        </figure>
+                        <p>Tejida a mano por las mujeres Wayuu de La Guajira.</p>
+                        <div class="precio">$180.000 COP</div>
+                        <a href="#" class="btn-comprar">Comprar Ahora</a>
+                    </article>
+
+                    <article class="producto-card">
+                        <figure>
+                            <img src="../../images/productos/artesanias/ceramica-raquira.jpg" alt="Cerámica de Ráquira" onerror="this.style.display='none'">
+                            <figcaption>Cerámica de Ráquira</figcaption>
+                        </figure>
+                        <p>Hermosas piezas de cerámica pintadas a mano en Ráquira, Boyacá.</p>
+                        <div class="precio">$95.000 COP</div>
+                        <a href="#" class="btn-comprar">Comprar Ahora</a>
+                    </article>
+
+                    <article class="producto-card">
+                        <figure>
+                            <img src="../../images/productos/artesanias/sombrero-vueltiao.jpg" alt="Sombrero Vueltiao" onerror="this.style.display='none'">
+                            <figcaption>Sombrero Vueltiao</figcaption>
+                        </figure>
+                        <p>Símbolo patrio tejido en caña flecha por artesanos zenúes.</p>
+                        <div class="precio">$120.000 COP</div>
+                        <a href="#" class="btn-comprar">Comprar Ahora</a>
+                    </article>
+                </div>
+            </article>
+        </section>
+
+        <!-- Productos Gourmet -->
+        <section class="gourmet-productos" id="gourmet">
+            <article>
+                <div class="texto-seccion">
+                    <header class="header">
+                        <h2>Productos Gourmet</h2>
+                    </header>
+                    <p>
+                        Descubre los sabores únicos de Colombia con nuestra selección de productos gourmet, 
+                        desde chocolates artesanales hasta mieles de flores silvestres y especias exóticas.
+                    </p>
+                </div>
+                <div class="contenedor-productos-gourmet">
+                    <div class="producto-gourmet">
+                        <img src="../../images/productos/gourmet/chocolate-artesanal.jpg" alt="Chocolate Artesanal" onerror="this.style.display='none'">
+                        <div class="info-producto">
+                            <h3>Chocolate Artesanal</h3>
+                            <p>Elaborado con cacao fino de aroma de Santander.</p>
+                            <span class="precio">$28.000 COP</span>
+                            <a href="#" class="btn-mini">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="producto-gourmet">
+                        <img src="../../images/productos/gourmet/miel-abejas.jpg" alt="Miel de Abejas" onerror="this.style.display='none'">
+                        <div class="info-producto">
+                            <h3>Miel de Abejas</h3>
+                            <p>Miel pura de flores silvestres de los páramos.</p>
+                            <span class="precio">$35.000 COP</span>
+                            <a href="#" class="btn-mini">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="producto-gourmet">
+                        <img src="../../images/productos/gourmet/panela-organica.jpg" alt="Panela Orgánica" onerror="this.style.display='none'">
+                        <div class="info-producto">
+                            <h3>Panela Orgánica</h3>
+                            <p>Endulzante natural de caña de azúcar.</p>
+                            <span class="precio">$15.000 COP</span>
+                            <a href="#" class="btn-mini">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="producto-gourmet">
+                        <img src="../../images/productos/gourmet/especias-colombianas.jpg" alt="Especias Colombianas" onerror="this.style.display='none'">
+                        <div class="info-producto">
+                            <h3>Especias Mix</h3>
+                            <p>Mezcla de especias tradicionales colombianas.</p>
+                            <span class="precio">$22.000 COP</span>
+                            <a href="#" class="btn-mini">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Proceso de compra -->
+        <section class="proceso-compra">
+            <article>
+                <div class="texto-seccion">
+                    <header class="header">
+                        <h2>¿Cómo Comprar?</h2>
+                    </header>
+                </div>
+                <div class="pasos-compra">
+                    <div class="paso">
+                        <div class="numero-paso">1</div>
+                        <h3>Selecciona</h3>
+                        <p>Elige tus productos favoritos de nuestra amplia variedad.</p>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">2</div>
+                        <h3>Personaliza</h3>
+                        <p>Ajusta cantidades y opciones según tus preferencias.</p>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">3</div>
+                        <h3>Paga Seguro</h3>
+                        <p>Realiza tu pago de forma segura con múltiples opciones.</p>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">4</div>
+                        <h3>Recibe</h3>
+                        <p>Te enviamos tus productos directamente a tu hogar.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Contacto y envíos -->
+        <section class="info-envios">
+            <div class="info-content">
+                <div class="envios-info">
+                    <h3>Información de Envíos</h3>
+                    <ul>
+                        <li>✅ Envíos gratis en compras superiores a $150.000</li>
+                        <li>✅ Entrega en 2-5 días hábiles</li>
+                        <li>✅ Cobertura nacional</li>
+                        <li>✅ Empaque especializado para productos frágiles</li>
+                    </ul>
+                </div>
+                <div class="contacto-info">
+                    <h3>¿Necesitas Ayuda?</h3>
+                    <div class="contacto-item">
+                        <strong>WhatsApp:</strong> +57 300 123 4567
+                    </div>
+                    <div class="contacto-item">
+                        <strong>Email:</strong> productos@colombiaviva.com
+                    </div>
+                    <div class="contacto-item">
+                        <strong>Horario:</strong> Lun-Vie 8:00 AM - 6:00 PM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <section class="navegacion">
+            <div class="nav-buttons">
+                <a href="../../index.html" class="btn btn-primary">Volver al Inicio</a>
+                <a href="#cafe" class="btn btn-secondary">Ver Catálogo</a>
+            </div>
         </section>
     </main>
-    
-    <!-- Implementar Footer -->
-    <br>
-    <div id="footer-placeholder"></div>
 
+    <div id="footer-placeholder"></div>
+    
     <script>
         // Insertar header
-        fetch('../../pages/header/header.html')
+        fetch('../header/header.html')
             .then(respuesta => respuesta.text())
             .then(dato => document.getElementById('header-placeholder').innerHTML = dato);
 
-        // Insertar footer
-        fetch('../../pages/footer/footer.html')
+        fetch('../footer/footer.html')
             .then(respuesta => respuesta.text())
-            .then(dato => document.getElementById('footer-placeholder').innerHTML = dato);
+            .then(dato => document.getElementById('footer-placeholder').innerHTML = dato);    
+
+        // Smooth scroll para los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de aparición para las tarjetas de productos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas las tarjetas de productos
+        document.querySelectorAll('.producto-card, .producto-gourmet').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>

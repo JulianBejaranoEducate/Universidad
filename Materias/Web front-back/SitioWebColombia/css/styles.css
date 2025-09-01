@@ -565,3 +565,12 @@ h2 {
     font-size: 14px;
     margin: 0;
 }
+
+.footer-nav h3,
+.footer-artist h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #FFD700;
+}

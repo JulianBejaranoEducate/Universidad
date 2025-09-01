@@ -71,7 +71,7 @@ function mostrarDetalles(detalles) {
     const oldDetails = document.querySelector('.pokemon-details');
     if (oldDetails) {
         oldDetails.remove();
-    }+
+    }
 
     // Obtiene el template
     const newTemplate = document.getElementById('nuevo-template').content;

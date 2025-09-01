@@ -4,38 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Vives - Música Colombiana</title>
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="../../images/icono-logo/colombia_viva.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/musica_colombiana/carlos_vives.css">
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <header>
-        <h1>Carlos Vives</h1>
-    </header>
-
     <main>
-        <section>
-            <h2>El Rey del Vallenato-Pop</h2>
-            <img src="../../images/musica-colombiana/carlos-vives.png" alt="Foto de Carlos Vives">
-            <p>
-                Aquí puedes agregar toda la información detallada sobre Carlos Vives,
-                su discografía, su impacto en la música y mucho más.
-            </p>
-            <a href="../../index.html">Volver al inicio</a>
+        <!-- Hero Section -->
+        <section class="hero-carlos">
+            <div class="hero-content">
+                <h1>Carlos Vives</h1>
+                <p class="hero-subtitle">El Rey del Vallenato-Pop Colombiano</p>
+                <div class="hero-buttons">
+                    <a href="#biografia" class="btn btn-primary">Conoce su Historia</a>
+                    <a href="#discografia" class="btn btn-secondary">Ver Discografía</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biografía Section -->
+        <section class="biografia" id="biografia">
+            <article class="biografia-content">
+                <div class="texto">
+                    <header class="header">
+                        <h2>Biografía</h2>
+                    </header>
+                    <p>
+                        Carlos Alberto Vives Restrepo nació el 7 de agosto de 1961 en Santa Marta, Magdalena. 
+                        Es considerado uno de los artistas más importantes de la música colombiana contemporánea, 
+                        conocido por fusionar géneros tradicionales como el vallenato con elementos del pop, rock y reggae.
+                    </p>
+                    <p>
+                        Su carrera artística comenzó en la televisión, pero fue con el álbum "Clásicos de la Provincia" (1993) 
+                        que revolucionó la música popular colombiana, modernizando el vallenato tradicional y llevándolo a 
+                        audiencias internacionales.
+                    </p>
+                    <p>
+                        A lo largo de su carrera, ha ganado múltiples premios Grammy y Grammy Latino, 
+                        consolidándose como un embajador de la cultura colombiana en el mundo.
+                    </p>
+                </div>
+                <div class="imagen">
+                    <img src="../../images/musica-colombiana/carlos-vives.png" alt="Carlos Vives en concierto">
+                </div>
+            </article>
+        </section>
+
+        <!-- Discografía destacada -->
+        <section class="discografia" id="discografia">
+            <article>
+                <div class="texto-discografia">
+                    <header class="header">
+                        <h2>Álbumes Destacados</h2>
+                    </header>
+                    <p>
+                        La discografía de Carlos Vives incluye más de 15 álbumes de estudio, 
+                        cada uno explorando diferentes facetas del folclor colombiano fusionado con sonidos contemporáneos.
+                    </p>
+                </div>
+                <div class="contenedor-tarjetas">
+                    <article>
+                        <figure>
+                            <img src="../../images/musica-colombiana/clasicos-provincia.jpg" alt="Clásicos de la Provincia" onerror="this.style.display='none'">
+                            <figcaption>Clásicos de la Provincia</figcaption>
+                        </figure>
+                        <p>El álbum que revolucionó el vallenato moderno en 1993.</p>
+                        <a href="#" class="album-link">Más detalles</a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <img src="../../images/musica-colombiana/fruta-fresca.jpg" alt="Fruta Fresca" onerror="this.style.display='none'">
+                            <figcaption>Fruta Fresca</figcaption>
+                        </figure>
+                        <p>Álbum ganador del Grammy Latino al Mejor Álbum Tropical (1999).</p>
+                        <a href="#" class="album-link">Más detalles</a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <img src="../../images/musica-colombiana/mas-corazon-profundo.jpg" alt="Más + Corazón Profundo" onerror="this.style.display='none'">
+                            <figcaption>Más + Corazón Profundo</figcaption>
+                        </figure>
+                        <p>Álbum que incluye colaboraciones con grandes artistas internacionales.</p>
+                        <a href="#" class="album-link">Más detalles</a>
+                    </article>
+                </div>
+            </article>
+        </section>
+
+        <!-- Canciones más populares -->
+        <section class="canciones-populares">
+            <article>
+                <div class="texto-canciones">
+                    <header class="header">
+                        <h2>Sus Grandes Éxitos</h2>
+                    </header>
+                    <p>
+                        Carlos Vives ha creado himnos que trascienden generaciones y fronteras, 
+                        convirtiendo el vallenato en un género conocido mundialmente.
+                    </p>
+                </div>
+                <div class="lista-canciones">
+                    <div class="cancion-item">
+                        <h3>"La Gota Fría"</h3>
+                        <p>Su versión moderna del clásico de Emiliano Zuleta se convirtió en un fenómeno internacional.</p>
+                    </div>
+                    <div class="cancion-item">
+                        <h3>"Fruta Fresca"</h3>
+                        <p>Un himno que celebra la alegría y los sabores de Colombia.</p>
+                    </div>
+                    <div class="cancion-item">
+                        <h3>"La Tierra del Olvido"</h3>
+                        <p>Una canción que habla del amor por la tierra natal y la nostalgia del regreso.</p>
+                    </div>
+                    <div class="cancion-item">
+                        <h3>"Volví a Nacer" (con Maluma)</h3>
+                        <p>Una colaboración exitosa que une generaciones de la música colombiana.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Legado cultural -->
+        <section class="legado" id="legado">
+            <article class="legado-content">
+                <div class="texto-legado">
+                    <header class="header">
+                        <h2>Su Legado Cultural</h2>
+                    </header>
+                    <p>
+                        Carlos Vives no solo ha sido un músico exitoso, sino también un promotor incansable 
+                        de la cultura colombiana. Su trabajo ha contribuido significativamente a la 
+                        preservación y modernización del folclor caribeño.
+                    </p>
+                    <p>
+                        Fundó la Fundación Tras la Perla, dedicada a la educación y el desarrollo cultural 
+                        en la región Caribe colombiana, demostrando su compromiso social más allá de la música.
+                    </p>
+                    <div class="datos-relevantes">
+                        <div class="dato">
+                            <span class="numero">2</span>
+                            <span class="descripcion">Grammy Awards</span>
+                        </div>
+                        <div class="dato">
+                            <span class="numero">14</span>
+                            <span class="descripcion">Grammy Latino</span>
+                        </div>
+                        <div class="dato">
+                            <span class="numero">30+</span>
+                            <span class="descripcion">Años de carrera</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen-legado">
+                    <img src="../../images/musica-colombiana/carlos-vives-concierto.jpg" alt="Carlos Vives en concierto" onerror="this.style.display='none'">
+                </div>
+            </article>
+        </section>
+
+        <!-- Navegación -->
+        <section class="navegacion">
+            <div class="nav-buttons">
+                <a href="../../index.html" class="btn btn-primary">Volver al Inicio</a>
+                <a href="../musica_colombiana.html" class="btn btn-secondary">Ver Más Artistas</a>
+            </div>
         </section>
     </main>
 
+
+    <!-- <footer class="footer-colombia">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../../images/icono-logo/colombia-viva.png" alt="Colombia Viva logo">
+                <p>Celebrando nuestra biodiversidad y cultura musical.</p>
+            </div>
+
+            <nav class="footer-nav">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="../../index.html#nuestro-pais">Nuestro País</a></li>
+                    <li><a href="../../index.html#fauna">Fauna</a></li>
+                    <li><a href="../../index.html#flora">Flora</a></li>
+                    <li><a href="../../index.html#cafe">Café</a></li>
+                    <li><a href="../../index.html#musica">Música</a></li>
+                    <li><a href="../../index.html#geografia">Geografía</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-artist">
+                <h3>Más Artistas</h3>
+                <ul>
+                    <li><a href="../musica_colombiana/shakira.html">Shakira</a></li>
+                    <li><a href="../musica_colombiana/juanes.html">Juanes</a></li>
+                    <li><a href="../musica_colombiana/diomedes_diaz.html">Diomedes Díaz</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="#" aria-label="Facebook">
+                    <img src="../../images/iconos-redes/facebook-fondo-negro.png" alt="Facebook">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="../../images/iconos-redes/instagram-fondo-negro.png" alt="Instagram">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="../../images/iconos-redes/twitter-fondo-negro.png" alt="Twitter">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Colombia Viva. Todos los derechos reservados.</p>
+            <p>Carlos Vives - Embajador de la música colombiana</p>
+        </div>
+    </footer> -->
+
     <div id="footer-placeholder"></div>
     
-    <br>
     <script>
         fetch('../header/header.html')
             .then(respuesta => respuesta.text())
             .then(dato => document.getElementById('header-placeholder').innerHTML = dato);
 
-        fetch('../../pages/footer/footer.html')
+        fetch('../footer/footer.html')
             .then(respuesta => respuesta.text())
             .then(dato => document.getElementById('footer-placeholder').innerHTML = dato);
+
+        // Smooth scroll para los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>

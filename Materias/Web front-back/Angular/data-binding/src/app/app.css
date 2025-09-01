@@ -1,0 +1,14 @@
+.rounded{
+    text-align: center;
+}
+
+/* Aplicar flexbox al componente principal */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}

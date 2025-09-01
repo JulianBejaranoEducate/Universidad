@@ -1,0 +1,576 @@
+/*
+Página de Carlos Vives - Siguiendo el estilo del sitio Colombia Viva
+Paleta de colores:
+#FFD700 - Amarillo (Colombia)
+#005BBB - Azul 
+#EF3340 - Rojo
+#3BA935 - Verde
+#6A3E2E - Café
+#B28FCE - Morado
+#000000 - Negro
+#FFFFFF - Blanco
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hind Mysuru", "sans-serif";
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section específica para Carlos Vives */
+.hero-carlos {
+    position: relative;
+    background: linear-gradient(
+        20deg,
+        rgba(255, 215, 0, 0.8) 0%,
+        rgba(0, 91, 187, 0.7) 50%,
+        rgba(239, 51, 64, 0.8) 100%
+    ), url('../../images/musica-colombiana/carlos-vives-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 200px 40px;
+    overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-carlos::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.hero-carlos .hero-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.hero-carlos h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: #EF3340;
+    color: #fff;
+    border: 2px solid #EF3340;
+}
+
+.btn-primary:hover {
+    background: #c12731;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 51, 64, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #005BBB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Secciones principales */
+.biografia,
+.discografia,
+.canciones-populares,
+.legado {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.biografia {
+    background-color: #f8f8f8;
+}
+
+.biografia-content,
+.legado-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+}
+
+.texto,
+.texto-legado {
+    flex: 1 1 500px;
+    padding: 20px;
+}
+
+.imagen,
+.imagen-legado {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.imagen img,
+.imagen-legado img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 3px solid #FFD700;
+}
+
+/* Headers */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    font-size: 42px;
+    color: #005BBB;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.header h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #EF3340);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Texto de secciones */
+.texto p,
+.texto-discografia p,
+.texto-canciones p,
+.texto-legado p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Discografía - Tarjetas de álbumes */
+.discografia {
+    background-color: #ffffff;
+}
+
+.texto-discografia {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contenedor-tarjetas article {
+    background: #fff;
+    border-top: 6px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    text-align: center;
+    flex: 1 1 320px;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.contenedor-tarjetas article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-top-color: #EF3340;
+}
+
+.contenedor-tarjetas figure {
+    margin-bottom: 20px;
+}
+
+.contenedor-tarjetas img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.contenedor-tarjetas figcaption {
+    font-weight: bold;
+    color: #005BBB;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.contenedor-tarjetas p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.album-link {
+    display: inline-block;
+    background: linear-gradient(45deg, #005BBB, #EF3340);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.album-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(239, 51, 64, 0.4);
+}
+
+/* Canciones populares */
+.canciones-populares {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+}
+
+.texto-canciones {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lista-canciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cancion-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #FFD700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.cancion-item:hover {
+    transform: translateX(10px);
+    border-left-color: #EF3340;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cancion-item h3 {
+    color: #005BBB;
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.cancion-item p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Legado cultural */
+.legado {
+    background-color: #ffffff;
+}
+
+.datos-relevantes {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dato {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFD700, #EF3340);
+    border-radius: 15px;
+    color: #fff;
+    min-width: 120px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.dato .numero {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dato .descripcion {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Navegación */
+.navegacion {
+    padding: 60px 40px;
+    background: linear-gradient(45deg, #005BBB, #EF3340);
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navegacion .btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.navegacion .btn:hover {
+    background: #fff;
+    color: #005BBB;
+    transform: translateY(-3px);
+}
+
+/* Footer
+.footer-colombia {
+    background: linear-gradient(90deg, #FFD700, #005BBB, #EF3340);
+    color: #fff;
+    padding: 60px 40px 0 40px;
+    font-family: 'Hind Mysuru', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.footer-logo p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    max-width: 250px;
+}
+
+.footer-nav,
+.footer-artist {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-nav h3,
+.footer-artist h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+.footer-nav ul,
+.footer-artist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li,
+.footer-artist ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a,
+.footer-artist ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.footer-nav ul li a:hover,
+.footer-artist ul li a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(45deg);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.footer-bottom p:last-child {
+    font-weight: 600;
+    color: #FFD700;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-carlos {
+        padding: 120px 20px;
+        text-align: center;
+    }
+    
+    .hero-carlos h1 {
+        font-size: 40px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .biografia,
+    .discografia,
+    .canciones-populares,
+    .legado {
+        padding: 40px 20px;
+    }
+    
+    .biografia-content,
+    .legado-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .header h2 {
+        font-size: 32px;
+    }
+    
+    .datos-relevantes {
+        gap: 20px;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-logo,
+    .footer-nav,
+    .footer-artist,
+    .footer-social {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carlos h1 {
+        font-size: 32px;
+    }
+    
+    .contenedor-tarjetas {
+        gap: 20px;
+    }
+    
+    .contenedor-tarjetas article {
+        padding: 20px;
+    }
+    
+    .lista-canciones {
+        grid-template-columns: 1fr;
+    }
+}

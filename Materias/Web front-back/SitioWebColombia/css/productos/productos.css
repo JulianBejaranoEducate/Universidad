@@ -1,0 +1,653 @@
+/*
+Página de Productos Colombianos - Siguiendo el estilo del sitio Colombia Viva
+Paleta de colores:
+#FFD700 - Amarillo (Colombia)
+#005BBB - Azul 
+#EF3340 - Rojo
+#3BA935 - Verde
+#6A3E2E - Café
+#B28FCE - Morado
+#000000 - Negro
+#FFFFFF - Blanco
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hind Mysuru", "sans-serif";
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FFFFFF;
+}
+
+/* Hero Section */
+.hero-productos {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 215, 0, 0.9) 0%,
+        /* rgba(59, 169, 53, 0.8) 30%, */
+        rgba(0, 91, 187, 0.8) 60%,
+        rgba(239, 51, 64, 0.9) 100%
+    ), url('../../images/productos/productos-hero-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 200px 40px;
+    overflow: hidden;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-productos::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.hero-productos .hero-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.hero-productos h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: #EF3340;
+    color: #fff;
+    border: 2px solid #EF3340;
+}
+
+.btn-primary:hover {
+    background: #c12731;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(239, 51, 64, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #005BBB;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Secciones principales */
+.introduccion,
+.cafe-productos,
+.artesanias-productos,
+.gourmet-productos,
+.proceso-compra {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.introduccion {
+    background-color: #f8f8f8;
+}
+
+.introduccion-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+}
+
+.texto {
+    flex: 1 1 500px;
+    padding: 20px;
+}
+
+.imagen {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 3px solid #FFD700;
+}
+
+/* Headers */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    font-size: 42px;
+    color: #005BBB;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.header h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #EF3340);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Texto de secciones */
+.texto p,
+.texto-seccion p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+.texto-seccion {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Tarjetas de productos principales */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.producto-card {
+    background: #fff;
+    border-top: 6px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    text-align: center;
+    flex: 1 1 320px;
+    max-width: 380px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.producto-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FFD700, #EF3340, #005BBB);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover::before {
+    transform: scaleX(1);
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.producto-card figure {
+    margin-bottom: 20px;
+}
+
+.producto-card img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover img {
+    transform: scale(1.05);
+}
+
+.producto-card figcaption {
+    font-weight: bold;
+    color: #005BBB;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.producto-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+    color: #EF3340;
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background: linear-gradient(45deg, #FFD700);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(45deg, #e6c200);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px;
+}
+
+/* Sección café */
+.cafe-productos {
+    background-color: #ffffff;
+}
+
+/* Sección artesanías */
+.artesanias-productos {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+}
+
+/* Productos Gourmet */
+.gourmet-productos {
+    background-color: #ffffff;
+}
+
+.contenedor-productos-gourmet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.producto-gourmet {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.producto-gourmet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #FFD700;
+}
+
+.producto-gourmet img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.producto-gourmet:hover img {
+    transform: scale(1.1);
+}
+
+.info-producto {
+    padding: 20px;
+}
+
+.info-producto h3 {
+    color: #005BBB;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-producto p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.info-producto .precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #EF3340;
+    margin-bottom: 15px;
+}
+
+.btn-mini {
+    background: #005BBB;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-mini:hover {
+    background: #EF3340;
+    transform: scale(1.05);
+}
+
+/* Proceso de compra */
+.proceso-compra {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+}
+
+.pasos-compra {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.paso {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+    border-color: #FFD700;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.numero-paso {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #005BBB, #EF3340);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.paso h3 {
+    color: #005BBB;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.paso p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Información de envíos */
+.info-envios {
+    background: linear-gradient(45deg, #005BBB, #EF3340);
+    color: #fff;
+    padding: 60px 40px;
+}
+
+.info-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.envios-info,
+.contacto-info {
+    flex: 1 1 400px;
+}
+
+.envios-info h3,
+.contacto-info h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.envios-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.envios-info li {
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contacto-item {
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contacto-item strong {
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+/* Navegación */
+.navegacion {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #3BA935, #005BBB);
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navegacion .btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.navegacion .btn:hover {
+    background: #fff;
+    color: #005BBB;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-productos {
+        padding: 120px 20px;
+    }
+    
+    .hero-productos h1 {
+        font-size: 40px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .introduccion,
+    .cafe-productos,
+    .artesanias-productos,
+    .gourmet-productos,
+    .proceso-compra {
+        padding: 40px 20px;
+    }
+    
+    .introduccion-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .header h2 {
+        font-size: 32px;
+    }
+    
+    .contenedor-tarjetas {
+        gap: 20px;
+    }
+    
+    .producto-card {
+        max-width: 100%;
+    }
+    
+    .contenedor-productos-gourmet {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pasos-compra {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .info-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-logo,
+    .footer-nav,
+    .footer-productos,
+    .footer-social {
+        min-width: 100%;
+    }
+
+    .info-envios {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-productos h1 {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .producto-card {
+        padding: 20px;
+    }
+    
+    .producto-card img {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.producto-card,
+.producto-gourmet,
+.paso {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Efectos especiales para productos premium */
+/* .producto-card:nth-child(2) {
+    background: linear-gradient(135deg, #fff 0%, #fffbf0 100%);
+    border-top-color: #3BA935;
+}
+
+.producto-card:nth-child(3) {
+    background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
+    border-top-color: #005BBB;
+} */

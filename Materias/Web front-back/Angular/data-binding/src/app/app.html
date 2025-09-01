@@ -1,25 +1,53 @@
 <app-header></app-header>
-<main class="container container-fluid">
-    <section class="interpolar">
-        <p>La interpolación de datos: se declaran propiedades o atributos y mediante el doble mostachos se coloca el valor:</p>
-        <p>{{getData()}}</p>
-    </section>
+<main class="container container-fluid"><br>
+    <body class="body">
+        <!-- Interpolar -->
+        <section class="card shadow rounded-0">
+            <p>La interpolación de datos: se declaran propiedades o atributos y mediante el doble mostachos se coloca el valor:</p>
+            <p>{{getData()}}</p>
+        </section><br>
+    
+        <!-- Propiedades -->
+        <section class="card shadow rounded-0">
+            <div>
+                <p>Se pasa valores a los atributos de las etiquetas en el DOM "template"</p>
+                <label for="edad">Edad:</label>
+                <input type="number" name="" id="edad" [value]="edad" placeholder="Ingrese el valor">
+            </div>
+    
+        <!-- Evento -->
+            <div>
+                <button class="btn btn-sm btn-outline-primary" (click)="getEvento()">Evento Click</button>
+            </div>
+        </section><br>
+    
+        <section class="card shadow rounded-0">
+            <div class="p-3">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" placeholder="Ingrese un dato" [(ngModel)]="nombre"><br>
+                <p>{{nombre}}</p>
+            </div>
+        </section>
 
-    <section class="propiedades">
-        <p>Se pasa valores a los atributos de las etiquetas en el DOM "template"</p>
-        <label for="edad">Edad:</label>
-        <input type="number" name="" id="edad" [value]="edad" placeholder="Ingrese el valor">
-    </section>
-
-    <section class="">
-        <button (Click)="getEvento()">Evento Click</button>
-    </section><br>
-
-    <div>
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" [(ngModel)]="nombre"><br>
-        <p>{{nombre}}</p>
-    </div>
+        <section>
+            <div class="p-3">
+                <h5>Ejercicio con diferentes métodos:</h5>
+                
+                <!-- Métodos de transformación -->
+                <p>Nombre en mayúsculas: {{transformar(nombre)}}</p>
+                <p>Edad en meses: {{calcular()}}</p>
+                
+                <!-- Métodos de validación -->
+                <p>¿Es mayor de edad? {{mayorEdad() ? 'Sí' : 'No'}}</p>
+                <p>¿Nombre válido? {{nombreEsValido() ? 'Sí' : 'No'}}</p>
+                
+                <!-- Métodos de manipulación -->
+                <button class="btn btn-success me-2" (click)="aumentarEdad()">Aumentar Edad</button>
+                <button class="btn btn-warning me-2" (click)="limpiarNombre()">Limpiar Nombre</button>
+                <button class="btn btn-danger" (click)="resetearDatos()">Reset</button>
+            </div>
+        </section>
+    </body>
 </main>
 <app-footer></app-footer>
 <!-- Terminar de diseñar, maquillaje -->
