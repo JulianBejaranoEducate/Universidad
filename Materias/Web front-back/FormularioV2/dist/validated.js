@@ -48,7 +48,6 @@ const MENSAJES_ERROR = {
 };
 
 
-
 // Función para validar un campo específico
 const validarCampo = (campo, valor) => {
     // Verificar si el campo está vacío

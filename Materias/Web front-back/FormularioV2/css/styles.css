@@ -5,7 +5,7 @@ Paleta De colores
 #F2F2F2,
 #402319,
 #D9ADA9,
-#4b4949
+#4b4949,
 */
 * {
   margin: 0;
@@ -34,7 +34,7 @@ body {
 }
 
 h1 {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .menu {
@@ -54,23 +54,39 @@ hr {
 
 .menu ul li {
   display: inline-block;
-  padding: 1.2% 2.2%;
+  padding: 0.7% 2%;
   background-color: #a60815;
   margin-top: 1%;
   margin-bottom: 2%;
   border-radius: 10px;
   color: #F2F2F2;
   font-size: 22px;
+  border: #F2F2F2;
 }
 
 .menu ul li:hover {
   background-color: #bf0f30;
-  border: 2px solid #402319;
+  border: 2px solid #F2F2F2;
+}
+
+.menu .btn_inicio {
+  background-color: black;
+  border: 2px solid #F2F2F2;
+}
+
+.menu .btn_servicios {
+  background-color: black;
+  border: 2px solid #F2F2F2;
+}
+
+.menu .btn_portafolio {
+  background-color: black;
+  border: 2px solid #F2F2F2;
 }
 
 .menu .btn_contacto {
   background-color: black;
-  border: 2px solid #402319;
+  border: 2px solid #F2F2F2;
 }
 
 .menu .btn_contacto > a {
@@ -167,7 +183,7 @@ input:focus,
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
-  background-image: linear-gradient(10deg, #402319, #bf0f30, #a60815 60%);
+  background-image: linear-gradient(10deg, #0f1ebf, #a60815 70%);
   padding: 2%;
 }
 
@@ -229,7 +245,7 @@ input:focus,
 .credits {
   width: 100%;
   padding: 2%;
-  background-color: #402319;
+  background-color: black;
   text-align: right;
   color: #f2f2f2;
 }
