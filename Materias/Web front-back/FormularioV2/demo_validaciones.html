@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Validaciones con Expresiones Regulares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .demo-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .regex-example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .valid-example {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .invalid-example {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Validaciones Implementadas con Expresiones Regulares</h1>
+    
+    <div class="demo-card">
+        <h2>📋 Funcionalidades Implementadas</h2>
+        <ul>
+            <li>✅ Validación con expresiones regulares avanzadas</li>
+            <li>✅ Mensajes de error personalizados</li>
+            <li>✅ Validación en tiempo real (blur/input events)</li>
+            <li>✅ Estilos visuales para errores y éxito</li>
+            <li>✅ Modales mejorados con diferentes tipos</li>
+            <li>✅ Accesibilidad con tecla Escape</li>
+        </ul>
+    </div>
+
+    <div class="demo-card">
+        <h2>🎯 Expresiones Regulares Utilizadas</h2>
+        
+        <h3>Nombres y Apellidos</h3>
+        <div class="regex-example">
+            /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$/
+        </div>
+        <p><span class="valid-example">✓ Válidos:</span> "Juan Carlos", "María José", "José Luis"</p>
+        <p><span class="invalid-example">✗ Inválidos:</span> "J", "Juan123", ""</p>
+
+        <h3>Email</h3>
+        <div class="regex-example">
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+        </div>
+        <p><span class="valid-example">✓ Válidos:</span> "usuario@gmail.com", "test.email@domain.co"</p>
+        <p><span class="invalid-example">✗ Inválidos:</span> "email@", "test.com", "@domain.com"</p>
+
+        <h3>Teléfono</h3>
+        <div class="regex-example">
+            /^[0-9]{7,10}$/
+        </div>
+        <p><span class="valid-example">✓ Válidos:</span> "3001234567", "6014567", "123456789"</p>
+        <p><span class="invalid-example">✗ Inválidos:</span> "123456", "300-123-4567", "abc123"</p>
+
+        <h3>Mensaje</h3>
+        <div class="regex-example">
+            /^.{10,500}$/
+        </div>
+        <p><span class="valid-example">✓ Válidos:</span> Mensajes entre 10 y 500 caracteres</p>
+        <p><span class="invalid-example">✗ Inválidos:</span> Mensajes muy cortos (<10) o muy largos (>500)</p>
+    </div>
+
+    <div class="demo-card">
+        <h2>🎨 Tipos de Modales Implementados</h2>
+        <button class="test-button" onclick="mostrarModal('error')">Modal de Error</button>
+        <button class="test-button" onclick="mostrarModal('exito')">Modal de Éxito</button>
+        <button class="test-button" onclick="mostrarModal('aceptar')">Modal de Confirmación</button>
+    </div>
+
+    <div class="demo-card">
+        <h2>📁 Archivos Modificados</h2>
+        <ul>
+            <li><code>dist/validated.js</code> - Sistema completo de validaciones con regex</li>
+            <li><code>dist/main.js</code> - Lógica mejorada con validación en tiempo real</li>
+            <li><code>dist/pintar.js</code> - Modales mejorados con diferentes tipos</li>
+            <li><code>css/styles.css</code> - Estilos para errores, éxito y animaciones</li>
+            <li><code>pqr.html</code> - HTML corregido y optimizado</li>
+        </ul>
+    </div>
+
+    <div class="demo-card">
+        <h2>🔧 Cómo Probar</h2>
+        <ol>
+            <li>Abrir el archivo <code>pqr.html</code> en el navegador</li>
+            <li>Intentar enviar el formulario vacío</li>
+            <li>Llenar campos con datos inválidos</li>
+            <li>Observar los mensajes de error personalizados</li>
+            <li>Llenar con datos válidos y enviar</li>
+        </ol>
+        
+        <button class="test-button" onclick="window.open('pqr.html', '_blank')">
+            🚀 Abrir Formulario
+        </button>
+    </div>
+
+    <script>
+        function mostrarModal(tipo) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: ${tipo === 'error' ? '#e74c3c' : tipo === 'exito' ? '#27ae60' : '#007bff'};
+                color: white;
+                padding: 20px;
+                border-radius: 8px;
+                z-index: 1000;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            `;
+            
+            const mensaje = {
+                'error': '❌ Este es un modal de error',
+                'exito': '✅ Este es un modal de éxito',
+                'aceptar': '❓ Este es un modal de confirmación'
+            };
+            
+            modal.innerHTML = `
+                <h3>${mensaje[tipo]}</h3>
+                <button onclick="this.parentElement.parentElement.remove(); this.parentElement.previousSibling.remove();" 
+                        style="background:white; color:${tipo === 'error' ? '#e74c3c' : tipo === 'exito' ? '#27ae60' : '#007bff'}; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; margin-top:15px;">
+                    Cerrar
+                </button>
+            `;
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(modal);
+            
+            setTimeout(() => {
+                if (modal.parentElement && overlay.parentElement) {
+                    modal.remove();
+                    overlay.remove();
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

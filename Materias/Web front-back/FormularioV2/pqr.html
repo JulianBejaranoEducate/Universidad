@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,10 +16,12 @@
   <body>
     <header id="header" class="container_header">
       <nav class="menu">
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Servicios</a></li>
-        <li><a href="">Portafolio</a></li>
-        <li class="btn_contacto"><a href="#fmContacto">Contacto PQR</a></li>
+        <ul>
+          <li><a href="">Inicio</a></li>
+          <li><a href="">Servicios</a></li>
+          <li><a href="">Portafolio</a></li>
+          <li class="btn_contacto"><a href="#fmContacto">Contacto PQR</a></li>
+        </ul>
       </nav>
       <hr />
       <section class="title">
@@ -31,18 +33,17 @@
         <h2 class="title_form">Llena el Formulario</h2>
         <hr />
         <label for="name">Nombres:</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" required />
         <label for="lastName">Apellidos:</label>
-        <input type="text" id="lastName" />
+        <input type="text" id="lastName" required />
         <label for="mail">Email:</label>
-        <input type="email" id="mail" />
+        <input type="email" id="mail" required />
         <label for="telephone">Teléfono:</label>
-        <input type="tel" id="telephone" />
-        <label for="msn">Déjanos tu mensaje</label>
-        <textarea id="fm_contact" rows="8" cols="50" class="msn" placeholder="Escribe tu Mensaje" required>
-        </textarea
-        >
-        <button class="btn_enviar" id="btnEnviar">Enviar Mensaje</button>
+        <input type="tel" id="telephone" required />
+        <label for="fm_contact">Déjanos tu mensaje</label>
+        <textarea id="fm_contact" name="msn" rows="8" cols="50" class="msn" placeholder="Escribe tu Mensaje" required>
+        </textarea>
+        <button type="submit" class="btn_enviar" id="btnEnviar">Enviar Mensaje</button>
       </form>
     </section>
     <div class="botones-accesibilidad">

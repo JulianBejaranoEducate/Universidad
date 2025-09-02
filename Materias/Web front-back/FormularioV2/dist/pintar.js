@@ -43,11 +43,26 @@ const pintarCard = (datos, tipo) => {
 };
 
 function modalAlerta(cadena, tipo, persona) {
+  // Remover alerta anterior si existe
+  const alertaExistente = document.getElementById("alerta");
+  if (alertaExistente) {
+    alertaExistente.remove();
+  }
+
   const alerta = document.createElement("div");
   const texto = document.createElement("p");
   texto.setAttribute("class", "textAlerta");
   alerta.setAttribute("id", "alerta");
-  alerta.setAttribute("class", "alerta");
+  
+  // Agregar clase según el tipo de alerta
+  if (tipo === "error") {
+    alerta.setAttribute("class", "alerta alerta-error");
+  } else if (tipo === "exito") {
+    alerta.setAttribute("class", "alerta alerta-exito");
+  } else {
+    alerta.setAttribute("class", "alerta");
+  }
+  
   texto.innerHTML = `<strong>${cadena}</strong>`;
   const bntCerrar = document.createElement("input");
   bntCerrar.setAttribute("type", "button");
@@ -57,27 +72,64 @@ function modalAlerta(cadena, tipo, persona) {
   alerta.appendChild(bntCerrar);
 
   if (tipo === "aceptar"){    
-    console.log("aqui");
+    console.log("Modalidad aceptar activada");
     const btnEnviar = document.createElement("input");
     btnEnviar.setAttribute("type", "button");
-    btnEnviar.setAttribute("class", "btnAlerta");
+    btnEnviar.setAttribute("class", "btnAlerta btnAlerta-enviar");
     btnEnviar.setAttribute("value", "Enviar");
     alerta.appendChild(btnEnviar);
     document.body.appendChild(alerta);
+    
     btnEnviar.onclick = function(){
-        console.log("aceptar");
+        console.log("Confirmación aceptada, enviando datos...");
         pintarCard(persona, "estudiante");
         document.getElementById("alerta").remove();
+        // Limpiar formulario después del envío exitoso
+        limpiarFormulario();
+        // Mostrar mensaje de éxito
+        setTimeout(() => {
+          modalAlerta("¡Su mensaje ha sido enviado exitosamente!", "exito");
+        }, 500);
     };
    
-  }else{
+  } else {
     document.body.appendChild(alerta); 
   }
 
- 
+  // Cerrar modal al hacer clic en cerrar
   bntCerrar.onclick = function () {
     document.getElementById("alerta").remove();
   };
+  
+  // Cerrar modal al hacer clic fuera de él
+  alerta.addEventListener('click', function(e) {
+    if (e.target === alerta) {
+      alerta.remove();
+    }
+  });
+  
+  // Cerrar modal con la tecla Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById("alerta")) {
+      document.getElementById("alerta").remove();
+    }
+  });
+}
+
+// Función para limpiar el formulario
+function limpiarFormulario() {
+  const campos = ['name', 'lastName', 'mail', 'telephone', 'fm_contact'];
+  campos.forEach(campo => {
+    const elemento = document.getElementById(campo);
+    if (elemento) {
+      elemento.value = '';
+      elemento.classList.remove('error');
+    }
+  });
+  
+  // Limpiar mensajes de error
+  const mensajesError = document.querySelectorAll('.mensaje-error');
+  mensajesError.forEach(mensaje => mensaje.remove());
 }
 
 export { agregarEstudiante, modalAlerta };
