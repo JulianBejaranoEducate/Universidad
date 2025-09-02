@@ -5,8 +5,21 @@ const REGEX_PATTERNS = {
     nombre: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$/,
     apellido: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$/,
     email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-    telefono: /^[0-9]{7,10}$/,
+    telefono: /^\+?[0-9]{7,15}$/,
     mensaje: /^.{10,500}$/
+};
+
+// Diccionario de países por prefijo internacional
+const PREFIJOS_PAISES = {
+    "+57": "Colombia",
+    "+1": "Estados Unidos",
+    "+34": "España",
+    "+52": "México",
+    "+54": "Argentina",
+    "+55": "Brasil",
+    "+44": "Reino Unido",
+    "+49": "Alemania",
+    "+33": "Francia"
 };
 
 // Mensajes de error personalizados en formato JSON
@@ -34,6 +47,8 @@ const MENSAJES_ERROR = {
     }
 };
 
+
+
 // Función para validar un campo específico
 const validarCampo = (campo, valor) => {
     // Verificar si el campo está vacío
@@ -43,21 +58,31 @@ const validarCampo = (campo, valor) => {
             mensaje: MENSAJES_ERROR[campo].vacio
         };
     }
-
-    // // Verficar si el campo esta lleno 
-    // if (valor || valor.trim() === '') {
-    //     return {
-    //         valido: true,
-    //         mensaje: MENSAJES_ERROR[campo].completado
-    //     };
-    // }
-
+    
     // Validar con expresión regular
     if (!REGEX_PATTERNS[campo].test(valor.trim())) {
         return {
             valido: false,
             mensaje: MENSAJES_ERROR[campo].invalido
         };
+    }
+
+    // Validación especial para teléfono: identificar país
+    if (campo === "telefono") {
+        let paisDetectado = null;
+        for (const prefijo in PREFIJOS_PAISES) {
+            if (valor.startsWith(prefijo)) {
+                paisDetectado = PREFIJOS_PAISES[prefijo];
+                break;
+            }
+        }
+
+        if (paisDetectado) {
+            return {
+                valido: true,
+                mensaje: `Número válido. Detectado: ${paisDetectado}`
+            };
+        }
     }
 
     return {

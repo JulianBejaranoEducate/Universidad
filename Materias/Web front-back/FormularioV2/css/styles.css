@@ -52,7 +52,7 @@ hr {
   border-color: #3e020254;
 }
 
-.menu>li {
+.menu ul li {
   display: inline-block;
   padding: 1.2% 2.2%;
   background-color: #a60815;
@@ -63,7 +63,7 @@ hr {
   font-size: 22px;
 }
 
-.menu>li:hover {
+.menu ul li:hover {
   background-color: #bf0f30;
   border: 2px solid #402319;
 }
@@ -73,7 +73,7 @@ hr {
   border: 2px solid #402319;
 }
 
-.menu .btn_contacto>a {
+.menu .btn_contacto > a {
   text-decoration: underline;
 }
 
@@ -82,7 +82,6 @@ hr {
   font-size: 4em;
   margin-top: 1%;
   color: #F2F2F2;
-
 }
 
 .fm_contact {
@@ -467,7 +466,7 @@ body.contraste-alto a {
   */
 
 @media (min-width: 768px) and (max-width: 1000px) {
-  .menu>li {
+  .menu ul li {
     font-size: 20px;
   }
 
@@ -485,7 +484,7 @@ body.contraste-alto a {
     padding: 3%;
   }
 
-  .menu>li {
+  .menu ul li {
     font-size: 18px;
     margin-bottom: 1.5%;
   }
@@ -514,7 +513,7 @@ body.contraste-alto a {
     padding: 3%;
   }
 
-  .menu>li {
+  .menu ul li {
     font-size: 15px;
     padding: 2%;
   }
@@ -556,7 +555,7 @@ body.contraste-alto a {
     margin: 2%;
   }
 
-  .menu>li {
+  .menu ul li {
     display: block;
     padding: 1%;
     text-align: center;
@@ -590,7 +589,6 @@ body.contraste-alto a {
 
   .footer {
     display: block;
-
     text-align: center;
   }
 
