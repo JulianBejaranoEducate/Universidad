@@ -1,13 +1,19 @@
-<h1 class="">Notas Uniempresarial</h1>
-<section>
-    <label for="qua" class="form-label">Nota:</label>
-    <input type="number" id="qua" class="form-control" [value]="qualification"><br>
-    <button class="btn btn-danger" (click)="qualification = qualification+1">+</button>
-    <button class="btn btn-primary" (click)="qualification = qualification-1">-</button>
+<h1 class="p-3">Gestor de Notas Uniempresarial</h1>
+<section class="card shadow rounded-0">
+    <div class="p-3">
+        <h3 class="">ngIf</h3>
+        <label for="qua" class="form-label">Nota:</label>
+        <input type="number" id="qua" class="form-control" [value]="qualification"><br>
+        <button class="btn btn-danger" (click)="qualification = qualification+1">+</button>
+        <button class="btn btn-primary" (click)="qualification = qualification-1">-</button>
+    </div>
 </section><br>
-<section>
-    <p>Resulatdo:</p>
-    <p *ngIf="qualification>=5 && qualification<=10">Nota Aprobada</p>
-    <p *ngIf="qualification<5 && qualification>=0">Nota No Aprobada</p>
-    <p *ngIf="qualification>=10">Notas Fuera de Rango</p>
+
+<section class="card shadow rounded-0">
+    <div class="p-3">
+        <p>Resulatdo:</p>
+        <p *ngIf="qualification>=5 && qualification<=10">Nota Aprobada</p>
+        <p *ngIf="qualification<5 && qualification>=0">Nota No Aprobada</p>
+        <p *ngIf="qualification>=10">Notas Fuera de Rango</p>
+    </div>
 </section>

@@ -1,12 +1,18 @@
-<h2>ngSwitch</h2>
 <!-- La etiqueta selecte debe tener un nombre accesible para que las personas que utilizan tecnologías de asistencia puedan entender su propósito -->
-<select [(ngModel)]="estado" class="form-select" aria-label="Seleccionar estado">
-    <option value="aprobado">Aprobado</option>
-    <option value="rechazado">Rechazado</option>
-    <option value="pendiente">Pendiente</option>
-</select>
-<div [ngSwitch]="estado">
-    <p *ngSwitchCase="'aprobado'">Estado: Aprobado</p>
-    <p *ngSwitchCase="'rechazado'">Estado: Rechazado</p>
-    <p *ngSwitchDefault>Estado: Pendiente</p>
-</div>
+<section class="card shadow rounded-0">
+    <div class="p-3">
+        <h3>ngSwitch</h3><br>
+        <h4>ngSwitchCase</h4>
+        <select [(ngModel)]="estado" class="form-select" aria-label="Seleccionar estado">
+            <option value="aprobado">Aprobado</option>
+            <option value="rechazado">Rechazado</option>
+            <option value="pendiente">Pendiente</option>
+        </select>
+        <div [ngSwitch]="estado">
+            <br><h4>ngSwitchDefault</h4>
+            <p *ngSwitchCase="'aprobado'"><strong>Estado:</strong> Aprobado</p>
+            <p *ngSwitchCase="'rechazado'">Estado: Rechazado</p>
+            <p *ngSwitchDefault><strong>Estado:</strong> Pendiente</p>
+        </div>
+    </div>
+</section>

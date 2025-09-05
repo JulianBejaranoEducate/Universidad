@@ -1,22 +1,30 @@
 <app-header></app-header>
 <main class="container container-fluid"><br>
     <body class="body">
+        <section class="card-header">
+            <p>Este sistema contiene diferentes metodos de obtención</p>
+        </section>
+
         <!-- Interpolar -->
         <section class="card shadow rounded-0">
-            <p>La interpolación de datos: se declaran propiedades o atributos y mediante el doble mostachos se coloca el valor:</p>
-            <p>{{getData()}}</p>
+            <div class="p-3">
+                <h3>Interpolar</h3>
+                <p>La interpolación de datos: se declaran propiedades o atributos y mediante el doble mostachos se coloca el valor:</p>
+                <p>{{getData()}}</p>
+            </div>
         </section><br>
     
         <!-- Propiedades -->
         <section class="card shadow rounded-0">
-            <div>
+            <div class="p-3">
+                <h3>Propiedades y Evento</h3>
                 <p>Se pasa valores a los atributos de las etiquetas en el DOM "template"</p>
                 <label for="edad">Edad:</label>
                 <input type="number" name="" id="edad" [value]="edad" placeholder="Ingrese el valor">
             </div>
     
         <!-- Evento -->
-            <div>
+            <div class="p-3">
                 <button class="btn btn-sm btn-outline-primary" (click)="getEvento()">Evento Click</button>
             </div>
         </section><br>
@@ -25,7 +33,7 @@
             <div class="p-3">
                 <label for="name">Nombre:</label>
                 <input type="text" name="name" id="name" placeholder="Ingrese un dato" [(ngModel)]="nombre"><br>
-                <p>{{nombre}}</p>
+                <p>El nombre ingresado es: <strong>{{nombre}}</strong></p>
             </div>
         </section>
 
