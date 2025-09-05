@@ -1,0 +1,18 @@
+<main>
+  <h1 class="m-3">Lotería</h1>
+  <section>
+    <!-- Parte para la balota -->
+    <app-balota [valor]="valor1"></app-balota>
+    <app-balota [valor]="valor2"></app-balota><br>
+    <button class="boton" (click)="jugar()">Empieza a Jugar</button>
+    <p>
+      <strong>El numero ganador es:</strong> {{numeroGanador}}
+    </p>
+  </section>
+  <hr>
+  <section>
+    <app-par-impar [valor]="suma" (parImpar)="getParImpar($event)" #calculo></app-par-impar>
+    <div>{{mensaje}}</div>
+  </section>
+</main>
+<router-outlet/>

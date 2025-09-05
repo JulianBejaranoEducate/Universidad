@@ -1,0 +1,10 @@
+.boton{
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border: 0rem;
+}

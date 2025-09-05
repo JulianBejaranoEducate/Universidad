@@ -1,0 +1,43 @@
+h1 {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    border-left: 4px solid #007bff;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-group {
+    width: 100%;
+}
+
+.btn-group .btn {
+    width: 50%;
+}
+
+.alert {
+    border-left: 4px solid transparent;
+}
+
+.alert-success {
+    border-left-color: #28a745;
+}
+
+.alert-danger {
+    border-left-color: #dc3545;
+}
+
+.alert-warning {
+    border-left-color: #ffc107;
+}

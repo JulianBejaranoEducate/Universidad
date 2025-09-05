@@ -1,0 +1,14 @@
+/* Estilos Balota */
+
+.balota{
+    width: 40%;
+    height: 8rem;
+    font-size: 4rem;
+    color: aliceblue; /* Color de la fuente */
+    background-color: #9F352F;
+    border-radius: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
