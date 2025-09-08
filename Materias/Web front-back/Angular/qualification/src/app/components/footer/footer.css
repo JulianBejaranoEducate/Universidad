@@ -1,3 +1,7 @@
+.seccion {
+    margin-top: auto; /* Empuja el footer hacia el pie de la pagina */
+}
+
 .footer {
     background-color: black;
     color: white;

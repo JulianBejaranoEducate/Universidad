@@ -1,54 +1,49 @@
 <main class="container mt-5">
     <section class="card shadow rounded-pill">
         <div class="card-header bg-primary text-white">
-            <h2 class="mb-0">{{ editarNota ? 'Editar Nota'}}</h2>
+            <h2 class="mb-0">{{ editarNota ? 'Editar Nota' : 'Agregar Nota' }}</h2>
         </div>
         <div class="card-body">
             <form class="col-form-label-lg">
                 <div class="mb-3 row">
                     <label for="id" class="col-sm-2 col-form-label">ID</label>
                     <div class="col-sm-10">
-                        <input #id type="number" id="id" class="form-control" placeholder="Ej: 1" [value]="editarTarea?.id || ''">
+                        <input #id type="number" id="id" class="form-control" placeholder="Ej: 1" [value]="editarNota?.id || ''">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="title" class="col-sm-2 col-form-label">Titulo</label>
                     <div class="col-sm-10">
-                        <input #tittle type="text" id="title" class="form-control" placeholder="Ej: Estudiar" [value]="editarTarea?.title || ''">
+                        <input #title type="text" id="title" class="form-control" placeholder="Ej: Parcial-WordPress" [value]="editarNota?.title || ''">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
-                    <label class="col-sm-2 col-form-label">Completada</label>
-                    <div class="col-sm-10 d-flex align-items-center">
-                        <div class="form-check form-switch">
-                            <div class="form-check form-switch">
-                                <input #completed type="checkbox" id="completed" class="form-check-input" [checked]="editarTarea?.nota || false">
-                                <label for="completed" class="form-check-label">Si / No</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 row">
-                    <label for="category" class="col-sm-2 col-form-label">Categoria</label>
+                    <label for="nota" class="col-sm-2 col-form-label">Nota</label>
                     <div class="col-sm-10">
-                        <input #category type="text" id="category" class="form-control" placeholder="Ej: Salud" [value]="editar?.category || ''">
+                        <input #nota type="number" step="0.1" id="nota" class="form-control" placeholder="Ej: 4.5" [value]="editarNota?.nota || ''">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="estado" class="col-sm-2 col-form-label">Estado</label>
+                    <div class="col-sm-10">
+                        <input #estado type="text" id="estado" class="form-control" placeholder="Ej: Aprobada/Rechazada" [value]="editarNota?.estado || ''">
                     </div>
                 </div>
 
                 <div class="text-end">
-                    <button *ngIf="!editingTask" type="button" class="btn btn-success"
-                        (click)="save(+id.value, tittle.value, completed.checked, category.value)">
-                        Guardar Tarea
+                    <button *ngIf="!editarNota" type="button" class="btn btn-success"
+                        (click)="guardar(+id.value, title.value, +nota.value, estado.value)">
+                        Guardar Nota
                     </button>
-                    <ng-container *ngIf="editingTask">
+                    <ng-container *ngIf="editarNota">
                         <button type="button" class="btn btn-primary me-2"
-                            (click)="update(+id.value, tittle.value, completed.checked, category.value)">
-                            Actualizar Tarea
+                            (click)="actualizar(+id.value, title.value, +nota.value, estado.value)">
+                            Actualizar Nota
                         </button>
-                        <button type="button" class="btn btn-secondary" (click)="cancelEdit()">
+                        <button type="button" class="btn btn-secondary" (click)="cancelarEdit()">
                             Cancelar
                         </button>
                     </ng-container>
@@ -56,21 +51,21 @@
             </form>
         </div>
     </section>
-    <section class="container mt-4" *ngIf="tasks.length > 0">
+    
+    <section class="container mt-4" *ngIf="notas.length > 0">
         <h2>Notas de estudiante</h2>
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let task of tasks">
+            <li class="list-group-item" *ngFor="let nota of notas">
                 <div>
-                    <strong> # {{task.id}}:</strong> {{task.title}}
-                    <span class="badge bg-success ms-2" *ngIf="task.compled">Completada</span>
-                    <span class="badge bg-secondary" *ngIf="!task.compled">Pendiente</span>
-                    <span class="text-muted ms-3" *ngIf="task.category">[{{ task.category }}]</span>
+                    <strong># {{nota.id}}:</strong> {{nota.title}}
+                    <span class="badge bg-primary ms-2">Nota: {{nota.nota}}</span>
+                    <span class="text-muted ms-3">[{{ nota.estado }}]</span>
                 </div>
-                <div>
-                    <button type="button" class="btn btn-sm btn-outline-primary me-2" (click)="startEdit(task)">
+                <div class="mt-2">
+                    <button type="button" class="btn btn-sm btn-outline-primary me-2" (click)="startEdit(nota)">
                         <i class="bi bi-pencil"></i> Editar
                     </button>
-                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="delete(task.id)">
+                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="eliminar(nota.id)">
                         <i>Eliminar</i>
                     </button>
                 </div>
