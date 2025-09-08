@@ -6,8 +6,8 @@ section {
 
 .header {
     height: 80px;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: rgba(0, 17, 255, 0.863);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,7 +42,7 @@ section {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 .header-derecha {
@@ -65,7 +65,7 @@ section {
     height: 20px;
     cursor: pointer;
     transition: transform 0.2s ease;
-    color: black;
+    color: white;
 }
 
 .icono:hover {
@@ -82,7 +82,7 @@ section {
 }
 
 .icono-link:hover .bi-twitter-x {
-    color: #000000;
+    color: #ea04ff;
 }
 
 .icono-link:hover .bi-instagram {

@@ -1,7 +1,41 @@
-.footer-content{
-    font-size: medium;
-    height: 40px;
-    color: white;
+.footer {
     background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+}
+
+.footer-centro {
+    flex: 1;
     text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-derecha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icono-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: white;
+}
+
+.icono:hover {
+    transform: scale(1.2);
+    color: #25D366;
 }
