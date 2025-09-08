@@ -1,30 +1,36 @@
 <app-header></app-header>
 
-<main class="main-container fade-in">
-  <section class="container">
-    <section>
+<main class="main-content">
+  <div class="content-centered">
+    <section class="container">
       <section>
-        <div class="mb-5">
-          <h1 class="display-5 fw-bold mb-3">Lotería</h1>
-          <p class="lead text-muted">Juega y descubre tu número ganador</p>
-        </div>
-      </section>
+        <section class="card shadow rounded-0">
+          <div>
+            <h1 class="display-5 fw-bold mb-3 text-center">Lotería</h1>
+            <p class="lead text-muted text-center">Juega y descubre tu número ganador</p>
+          </div>
+        </section><hr>
 
-      <!-- Parte para la balota -->
-      <app-balota [valor]="valor1"></app-balota>
-      <app-balota [valor]="valor2"></app-balota><br>
-      <button class="boton" (click)="jugar()">Empieza a Jugar</button>
-      <p>
-        <strong>El numero ganador es:</strong> {{numeroGanador}}
-      </p>
+        <section class="text-center">
+          <!-- Parte para la balota -->
+          <div class="d-flex justify-content-center gap-3 mb-4">
+            <app-balota [valor]="valor1"></app-balota>
+            <app-balota [valor]="valor2"></app-balota>
+          </div>
+          <button class="boton mb-3" (click)="jugar()">Empieza a Jugar</button>
+          <p class="mb-4">
+            <strong>El numero ganador es:</strong> {{numeroGanador}}
+          </p>
+        </section>
+      </section>
+      <hr>
+      <section class="card shadow rounded-0">
+        <app-par-impar [valor]="suma" (parImpar)="getParImpar($event)" #calculo></app-par-impar>
+        <div class="text-center">{{mensaje}}</div>
+      </section>
     </section>
-    <hr>
-    <section>
-      <app-par-impar [valor]="suma" (parImpar)="getParImpar($event)" #calculo></app-par-impar>
-      <div>{{mensaje}}</div>
-    </section>
-  </section>
-</main><br>
+  </div>
+</main>
 
 <app-footer></app-footer>
 

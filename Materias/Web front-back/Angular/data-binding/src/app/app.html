@@ -35,9 +35,9 @@
                 <input type="text" name="name" id="name" placeholder="Ingrese un dato" [(ngModel)]="nombre"><br>
                 <p>El nombre ingresado es: <strong>{{nombre}}</strong></p>
             </div>
-        </section>
+        </section><br>
 
-        <section>
+        <section class="card shadow rounded-0">
             <div class="p-3">
                 <h5>Ejercicio con diferentes métodos:</h5>
                 
@@ -51,11 +51,12 @@
                 
                 <!-- Métodos de manipulación -->
                 <button class="btn btn-success me-2" (click)="aumentarEdad()">Aumentar Edad</button>
+                <button class="btn btn-dark me-2" (click)="disminuirEdad()">Disminuir Edad</button>
                 <button class="btn btn-warning me-2" (click)="limpiarNombre()">Limpiar Nombre</button>
                 <button class="btn btn-danger" (click)="resetearDatos()">Reset</button>
             </div>
         </section>
     </body>
-</main>
+</main><br>
 <app-footer></app-footer>
 <!-- Terminar de diseñar, maquillaje -->

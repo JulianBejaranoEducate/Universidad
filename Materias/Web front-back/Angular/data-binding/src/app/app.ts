@@ -52,6 +52,10 @@ export class App {
     this.edad++;
   }
 
+  public disminuirEdad(): void {
+    this.edad--;
+  }
+
   public limpiarNombre(): void {
     this.nombre = '';
   }
