@@ -1,0 +1,26 @@
+<div class="container"><br>
+    <div class="container"><br>
+        <h1>Formularios Reactivos</h1>
+        <form [formGroup]="form" (ngSubmit)="keep($event)" novalidate>
+            <label for="name">Name: </label>
+            <input id="name" type="text" class="form-control" formControlName="name"
+                [ngClass]="{ 'is-invalid': form.get('name')?.errors && form.get('name')?.dirty }">
+            <div *ngIf="form.get('name')?.errors && form.get('name')?.touched" class="invalid-feedback">
+                <p *ngIf="form.get('name')?.hasError('required')">Campo Requerido</p>
+                <p *ngIf="form.get('name')?.hasError('pattern')">Error en formato</p>
+            </div><br>{{form.get('name')?.errors | json }}<br><br>
+            <label for="mail">email: </label>
+            <input id="mail" type="email" formControlName="mail" class="form-control"
+                [ngClass]="{ 'is-invalid': form.get('mail')?.errors && form.get('mail')?.dirty }"
+                class="form-control"><br>
+            <div *ngIf="form.get('mail')?.errors && form.get('mail')?.touched" class="invalid-feedback">
+                <p *ngIf="mailField?.hasError('required')">Campo Requerido</p>
+                <p *ngIf="mailField?.hasError('email')">Error en formato</p>
+                <p *ngIf="mailField?.hasError('minlength')">Mínimo permitido 12</p>
+                <p *ngIf="mailField?.hasError('maxlength')">Máximo permitido 25</p>
+                <p *ngIf="mailField?.hasError('pattern')">Error formato correo</p>
+            </div>{{form.get('mail')?.errors | json }}<br><br>
+            <button type="button" class="btn btn-info" [disabled]="form.invalid">Enviar</button><br>
+        </form><br>
+    </div>
+</div>
